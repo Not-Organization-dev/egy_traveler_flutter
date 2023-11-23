@@ -1,11 +1,16 @@
-import 'package:egy_taveler/View/Widgets/signin_form.dart';
+import 'package:egy_taveler/View/Components/ui_small_top_buttons.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../Widgets/signup_form.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SignScreen extends StatelessWidget {
-  const SignScreen({super.key});
+  const SignScreen({
+    super.key,
+    required this.showContent,
+  });
+
+  final Widget showContent;
   @override
   Widget build(BuildContext context) {
     //! final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
@@ -21,22 +26,12 @@ class SignScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Container(
-                      width: 38.w,
-                      height: 36.h,
-                      decoration: const BoxDecoration(
-                        color: Colors.blue,
-                        shape: BoxShape.circle,
-                      ),
+                    CustomUiSmallButton(
+                      icon: SvgPicture.asset("assets/svg_icons/back.svg"),
                     ),
                     const Spacer(),
-                    Container(
-                      width: 38.w,
-                      height: 36.h,
-                      decoration: const BoxDecoration(
-                        color: Colors.blue,
-                        shape: BoxShape.circle,
-                      ),
+                    CustomUiSmallButton(
+                      icon: SvgPicture.asset("assets/svg_icons/close.svg"),
                     ),
                   ],
                 ),
@@ -53,7 +48,7 @@ class SignScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SignInForm(),
+                showContent,
               ],
             ),
           ),

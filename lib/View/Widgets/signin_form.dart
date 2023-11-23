@@ -138,6 +138,7 @@ class _SignInFormState extends State<SignInForm> {
                 textColor: const Color.fromRGBO(255, 255, 255, 1),
                 buttonColor: const Color.fromRGBO(43, 52, 55, 1),
                 onTapButton: () {},
+                borderColor: const Color.fromRGBO(43, 52, 55, 1),
               ),
             ),
           ),
