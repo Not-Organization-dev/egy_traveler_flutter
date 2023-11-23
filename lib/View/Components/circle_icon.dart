@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CircleIcon extends StatelessWidget {
   const CircleIcon({
@@ -12,6 +11,7 @@ class CircleIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //TODO: should be tappable, need colored icons somehow.
     return Container(
       height: 68.h,
       width: 68.w,

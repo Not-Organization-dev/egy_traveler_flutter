@@ -23,8 +23,10 @@ class _SignUpFormState extends State<SignUpForm> {
     super.dispose();
   }
 
+//TODO: use this function on buttons
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
+      //TODO: should replace this with something idk
       print("Valid Sign up Data");
     }
   }
@@ -172,6 +174,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 textColor: const Color.fromRGBO(255, 255, 255, 1),
                 buttonColor: const Color.fromRGBO(43, 52, 55, 1),
                 onTapButton: () {},
+                borderColor: const Color.fromRGBO(43, 52, 55, 1),
               ),
             ),
           ),

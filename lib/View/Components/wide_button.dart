@@ -9,11 +9,13 @@ class WideButton extends StatelessWidget {
     required this.textColor,
     required this.buttonColor,
     required this.onTapButton,
+    required this.borderColor,
   });
 
   final String buttonText;
   final Color textColor;
   final Color buttonColor;
+  final Color borderColor;
   final void Function() onTapButton;
 
   @override
@@ -27,6 +29,7 @@ class WideButton extends StatelessWidget {
           // color: const Color.fromRGBO(43, 52, 55, 1),
           color: buttonColor,
           shape: RoundedRectangleBorder(
+            side: BorderSide(color: borderColor, width: 2.w),
             borderRadius: BorderRadius.circular(50.r),
           ),
         ),

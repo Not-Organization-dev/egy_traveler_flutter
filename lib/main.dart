@@ -1,4 +1,5 @@
-import 'package:egy_taveler/View/Screens/sign_screen.dart';
+import 'package:egy_taveler/View/Screens/sign_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +18,7 @@ class EgyTraveler extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) => MaterialApp(
         theme: theme,
-        home: const SignScreen(),
+        home: const SignScreenController(),
       ),
       designSize: const Size(360, 800),
     );
