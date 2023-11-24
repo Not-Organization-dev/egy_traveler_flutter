@@ -5,19 +5,27 @@ class CustomUiSmallButton extends StatelessWidget {
   const CustomUiSmallButton({
     super.key,
     required this.icon,
+    required this.onTapAction,
   });
   final Widget icon;
+  final void Function() onTapAction;
 
   @override
   Widget build(BuildContext context) {
-    //TODO: should be tappable, close button could be removed from other screens
-    return Container(
-      width: 38.w,
-      height: 36.h,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
+    //TODO: close button could be removed from other screens
+    return InkWell(
+      //TODO: need another look here
+      // splashColor: Colors.white,
+      borderRadius: BorderRadius.circular(50.r),
+      onTap: onTapAction,
+      child: Container(
+        width: 38.w,
+        height: 36.h,
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+        ),
+        child: icon,
       ),
-      child: icon,
     );
   }
 }

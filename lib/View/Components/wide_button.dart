@@ -21,6 +21,11 @@ class WideButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.all(
+        Radius.circular(
+          30.r,
+        ),
+      ),
       onTap: onTapButton,
       child: Container(
         width: 320.w,
