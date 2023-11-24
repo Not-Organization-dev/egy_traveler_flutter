@@ -11,21 +11,25 @@ class CircleIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //TODO: should be tappable, need colored icons somehow.
-    return Container(
-      height: 68.h,
-      width: 68.w,
-      decoration: ShapeDecoration(
-        shape: CircleBorder(
-          side: BorderSide(
-            width: 1.w,
-            color: const Color.fromARGB(134, 158, 158, 158),
+    //TODO: Need action Function, need colored icons somehow.
+    return InkWell(
+      borderRadius: BorderRadius.circular(50.r),
+      onTap: () {},
+      child: Container(
+        height: 68.h,
+        width: 68.w,
+        decoration: ShapeDecoration(
+          shape: CircleBorder(
+            side: BorderSide(
+              width: 1.w,
+              color: const Color.fromARGB(134, 158, 158, 158),
+            ),
           ),
+          color: Colors.transparent,
         ),
-        color: Colors.transparent,
-      ),
-      child: Center(
-        child: icon,
+        child: Center(
+          child: icon,
+        ),
       ),
     );
   }

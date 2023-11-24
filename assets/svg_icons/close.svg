@@ -1,6 +1,5 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="IC/24/close">
-<path id="Vector" d="M15.1876 4.70459L5.36938 14.5228" stroke="#12121D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M5.36938 4.70459L15.1876 14.5228" stroke="#12121D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="18" cy="18" r="16.5" fill="white" stroke="#F2F5FA" stroke-width="3"/>
+<path d="M23.1876 12.7046L13.3694 22.5228" stroke="#12121D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3694 12.7046L23.1876 22.5228" stroke="#12121D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
