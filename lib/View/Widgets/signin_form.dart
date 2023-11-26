@@ -135,10 +135,11 @@ class _SignInFormState extends State<SignInForm> {
               padding: EdgeInsets.symmetric(vertical: 17.h),
               child: WideButton(
                 buttonText: "Sign in",
+                textSize: 16,
+                buttonWidth: 129,
                 textColor: const Color.fromRGBO(255, 255, 255, 1),
                 buttonColor: const Color.fromRGBO(43, 52, 55, 1),
                 onTapButton: () {},
-                borderColor: const Color.fromRGBO(43, 52, 55, 1),
               ),
             ),
           ),

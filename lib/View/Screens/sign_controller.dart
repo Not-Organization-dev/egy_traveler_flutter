@@ -19,97 +19,75 @@ class SignScreenController extends StatelessWidget {
   Widget build(BuildContext context) {
     //! final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 24.w,
-          ),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    CustomUiSmallButton(
-                      onTapAction: () {
-                        backMethod(context);
-                      },
-                      icon: SvgPicture.asset("assets/svg_icons/back.svg"),
-                    ),
-                    const Spacer(),
-                    CustomUiSmallButton(
-                      onTapAction: () {},
-                      icon: SvgPicture.asset("assets/svg_icons/close.svg"),
-                    ),
-                  ],
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: SvgPicture.asset(
-                    "assets/svg_icons/MobileLoginAmico.svg",
-                    width: 394.w,
-                    height: 368.h,
-                  ),
-                ),
-                Text(
-                  "Welcome to EgyTraveler",
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        fontFamily: GoogleFonts.roboto().fontFamily,
-                        fontSize: 24.sp,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        height: (33 / 24).h,
-                      ),
-                ),
-                Text(
-                  "EgyTraveler: Your Smart Travel Guide.",
-                  style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                        fontFamily: GoogleFonts.roboto().fontFamily,
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w400,
-                      ),
-                ),
-                SizedBox(
-                  height: 40.h,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 17.h),
-                  child: WideButton(
-                    buttonText: "Sign in",
-                    textColor: Colors.white,
-                    buttonColor: const Color.fromRGBO(43, 52, 55, 1),
-                    borderColor: const Color.fromRGBO(43, 52, 55, 1),
-                    onTapButton: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignScreen(
-                            showContent: SignInForm(),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-                WideButton(
-                  buttonText: "Sign up",
-                  textColor: const Color(0xff2b3437),
-                  buttonColor: Colors.white,
-                  borderColor: const Color(0xff2b3437),
-                  onTapButton: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SignScreen(
-                          showContent: SignUpForm(),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ],
+      body: Container(
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(
+              "assets/images/signController_screen.png",
             ),
           ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 113.h,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 47.w),
+              child: Text(
+                "EgyTraveler",
+                style: GoogleFonts.roboto(
+                  color: Colors.white,
+                  fontSize: 44.sp,
+                  fontWeight: FontWeight.w900,
+                  height: (52 / 44).h,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 402.h,
+            ),
+            WideButton(
+              buttonText: "Sign up",
+              textSize: 22,
+              buttonWidth: 328,
+              textColor: const Color(0xff2b3437),
+              buttonColor: Colors.white,
+              onTapButton: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignScreen(
+                      showContent: SignUpForm(),
+                    ),
+                  ),
+                );
+              },
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 27.h),
+              child: WideButton(
+                buttonText: "Sign in",
+                textSize: 22,
+                buttonWidth: 328,
+                textColor: Colors.white,
+                buttonColor: Colors.black.withOpacity(.5),
+                onTapButton: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignScreen(
+                        showContent: SignInForm(),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
