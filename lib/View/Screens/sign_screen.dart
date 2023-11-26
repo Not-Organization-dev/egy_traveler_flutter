@@ -23,7 +23,7 @@ class SignScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 24.w,
+            horizontal: 30.w,
           ),
           child: SingleChildScrollView(
             child: Column(
@@ -31,33 +31,22 @@ class SignScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
+                    SizedBox(
+                      height: 33.h,
+                    ),
                     CustomUiSmallButton(
                       onTapAction: () {
                         backMethod(context);
                       },
-                      icon: SvgPicture.asset("assets/svg_icons/back.svg"),
-                    ),
-                    const Spacer(),
-                    CustomUiSmallButton(
-                      onTapAction: () {},
-                      icon: SvgPicture.asset("assets/svg_icons/close.svg"),
+                      icon:
+                          SvgPicture.asset("assets/svg_icons/chevronLeft.svg"),
                     ),
                   ],
                 ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Image.asset(
-                        'assets/images/egyTravelerLogo.png',
-                        width: 109.w,
-                        height: 111.h,
-                      ),
-                    ],
-                  ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.w),
+                  child: showContent,
                 ),
-                showContent,
               ],
             ),
           ),

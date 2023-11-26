@@ -171,10 +171,11 @@ class _SignUpFormState extends State<SignUpForm> {
               padding: EdgeInsets.symmetric(vertical: 36.h),
               child: WideButton(
                 buttonText: "Sign up",
+                textSize: 16,
+                buttonWidth: 129,
                 textColor: const Color.fromRGBO(255, 255, 255, 1),
                 buttonColor: const Color.fromRGBO(43, 52, 55, 1),
                 onTapButton: () {},
-                borderColor: const Color.fromRGBO(43, 52, 55, 1),
               ),
             ),
           ),
