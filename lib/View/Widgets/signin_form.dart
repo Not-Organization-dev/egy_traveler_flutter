@@ -1,10 +1,10 @@
 import 'package:egy_taveler/View/Components/circle_icon.dart';
 import 'package:egy_taveler/View/Components/wide_button.dart';
+import 'package:egy_taveler/View/Screens/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
@@ -105,7 +105,15 @@ class _SignInFormState extends State<SignInForm> {
               children: [
                 const Spacer(),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // go to Reset Password scrreen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (ctx) => const ResetPassword(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Reset Password",
                     style: Theme.of(context).textTheme.displaySmall!.copyWith(
