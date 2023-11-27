@@ -74,7 +74,7 @@ class SignScreenController extends StatelessWidget {
                 textSize: 22,
                 buttonWidth: 328,
                 textColor: Colors.white,
-                buttonColor: Colors.black.withOpacity(.5),
+                buttonColor: Colors.black.withOpacity(.6),
                 onTapButton: () {
                   Navigator.push(
                     context,

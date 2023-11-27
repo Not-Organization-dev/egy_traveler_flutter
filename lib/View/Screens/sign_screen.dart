@@ -21,34 +21,26 @@ class SignScreen extends StatelessWidget {
     //! final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 30.w,
-          ),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    SizedBox(
-                      height: 33.h,
-                    ),
-                    CustomUiSmallButton(
-                      onTapAction: () {
-                        backMethod(context);
-                      },
-                      icon:
-                          SvgPicture.asset("assets/svg_icons/chevronLeft.svg"),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.w),
-                  child: showContent,
-                ),
-              ],
-            ),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  SizedBox(
+                    width: 28,
+                    height: 30.h,
+                  ),
+                  CustomUiSmallButton(
+                    onTapAction: () {
+                      backMethod(context);
+                    },
+                    icon: SvgPicture.asset("assets/svg_icons/chevronLeft.svg"),
+                  ),
+                ],
+              ),
+              showContent,
+            ],
           ),
         ),
       ),
