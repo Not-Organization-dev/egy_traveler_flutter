@@ -19,8 +19,8 @@ class CustomUiSmallButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(50.r),
       onTap: onTapAction,
       child: Container(
-        width: 38.w,
-        height: 36.h,
+        width: 23.w,
+        height: 23.h,
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
         ),
