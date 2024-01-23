@@ -1,6 +1,3 @@
-import 'package:country_pickers/country.dart';
-import 'package:country_pickers/country_picker_dropdown.dart';
-import 'package:country_pickers/utils/utils.dart';
 import 'package:egy_taveler/View/Components/wide_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -76,7 +73,7 @@ class OTPScreen extends StatelessWidget {
                         length: 5, // Change the length as needed
                         onChanged: (value) {
                           // Handle OTP input
-                          print(value);
+                          // print(value);
                         },
                         cursorColor: Colors.black,
                         cursorWidth: 1,
