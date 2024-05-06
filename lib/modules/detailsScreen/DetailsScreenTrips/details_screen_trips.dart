@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../../../generated/assets.dart';
-import '../../../core/resources/color_manager.dart';
+import '../../../core/utils/color_manager.dart';
 import '../DetailsScreenPlaceByTrip/details_screen_place_trip.dart';
 import 'package:appbar_animated/appbar_animated.dart';
 

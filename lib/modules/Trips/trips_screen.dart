@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../generated/assets.dart';
 import '../../layout/homeLayout/cubit/cubit.dart';
-import '../../core/resources/color_manager.dart';
+import '../../core/utils/color_manager.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 import 'package:skeletonizer/skeletonizer.dart';

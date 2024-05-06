@@ -7,7 +7,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
 import 'package:appbar_animated/appbar_animated.dart';
 
-import '../../../core/resources/color_manager.dart';
+import '../../../core/utils/color_manager.dart';
 
 class DetailsScreenArticles extends StatefulWidget {
   const DetailsScreenArticles(

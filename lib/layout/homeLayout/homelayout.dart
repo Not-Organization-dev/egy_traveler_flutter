@@ -10,7 +10,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import '../../generated/assets.dart';
 import '../../modules/my_trips/my_trips_screen.dart';
 import '../../modules/profile/profile_screen.dart';
-import '../../core/resources/color_manager.dart';
+import '../../core/utils/color_manager.dart';
 import 'cubit/cubit.dart';
 import 'cubit/state.dart';
 

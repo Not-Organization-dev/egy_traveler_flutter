@@ -1,4 +1,4 @@
-import 'package:egytraveler/core/resources/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:flutter/material.dart';
 
 import '../../generated/assets.dart';

@@ -1,7 +1,7 @@
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/core/resources/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../Auth/widget/text_filed_egypt.dart';
