@@ -4,7 +4,7 @@ import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../../core/resources/color_manager.dart';
+import '../../core/utils/color_manager.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../detailsScreen/DetailsScreenPlace/details_screen_place.dart';

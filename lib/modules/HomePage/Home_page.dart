@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/widgets.dart';
 import '../../generated/assets.dart';
-import '../../core/resources/color_manager.dart';
+import '../../core/utils/color_manager.dart';
 import '../articles/articles_screen.dart';
 import '../detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
 import '../detailsScreen/DetailsScreenPlace/details_screen_place.dart';

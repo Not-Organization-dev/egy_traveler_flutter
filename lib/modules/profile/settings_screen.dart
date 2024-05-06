@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../layout/homeLayout/cubit/cubit.dart';
 import '../../shared/components/components.dart';
 import '../../shared/components/constants.dart';
-import '../../core/resources/color_manager.dart';
+import '../../core/utils/color_manager.dart';
 import '../Auth/widget/text_filed_egypt.dart';
 import '../newPassword/new_password.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

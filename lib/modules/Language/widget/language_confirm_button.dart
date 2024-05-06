@@ -1,5 +1,5 @@
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/core/resources/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
 import 'package:egytraveler/modules/onBoarding/view/onboarding.dart';

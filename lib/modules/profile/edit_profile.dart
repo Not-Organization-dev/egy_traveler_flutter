@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
 import 'package:cherry_toast/cherry_toast.dart';
-import '../../core/resources/color_manager.dart';
+import '../../core/utils/color_manager.dart';
 import '../../core/resources/font_manager.dart';
 import '../newPassword/new_password.dart';
 import 'package:cherry_toast/resources/arrays.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/core/resources/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 
 import '../../../generated/assets.dart';

@@ -8,7 +8,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../shared/components/constants.dart';
 import '../../../shared/network/local/cache_helper.dart';
-import '../../../core/resources/color_manager.dart';
+import '../../../core/utils/color_manager.dart';
 
 class BoardingModel {
   String title;

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:egytraveler/core/resources/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+
+// where all TextStyles will be stored for less code and more readability
 
 abstract class Styles {
   //Fonts

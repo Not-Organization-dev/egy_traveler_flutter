@@ -13,7 +13,7 @@ import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
 import 'package:appbar_animated/appbar_animated.dart';
 
-import '../../../core/resources/color_manager.dart';
+import '../../../core/utils/color_manager.dart';
 import '../../Recommend/recommend_screen.dart';
 
 class DetailsScreenPlace extends StatefulWidget {

@@ -1,3 +1,4 @@
+import 'package:egytraveler/core/Theme/theme.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
 import 'package:egytraveler/layout/homeLayout/homelayout.dart';
 import 'package:egytraveler/modules/Auth/cubit/auth_cubit.dart';
@@ -6,7 +7,7 @@ import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 import 'package:egytraveler/shared/network/remote/dio_helper.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/core/resources/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -106,20 +107,8 @@ class MyApp extends StatelessWidget {
                 : themeModeCacheHelper == 'Light'
                     ? ThemeMode.light
                     : ThemeMode.system,
-            darkTheme: ThemeData(
-              brightness: Brightness.dark,
-              primaryColor: ColorManager.kColorPrimary,
-              useMaterial3:
-                  true, /*colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)
-                  .copyWith(background:  Colors.black),*/
-            ),
-            theme: ThemeData(
-              brightness: Brightness.light,
-              primaryColor: ColorManager.kColorPrimary,
-              useMaterial3: true,
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)
-                  .copyWith(background: const Color(0xff003441)),
-            ),
+            darkTheme: kDarkThemeData,
+            theme: kLightThemeData,
             home: StreamBuilder<ConnectivityResult>(
               stream: Connectivity().onConnectivityChanged,
               builder: (context, snapshot) {
