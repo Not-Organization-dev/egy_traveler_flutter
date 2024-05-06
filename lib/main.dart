@@ -108,14 +108,7 @@ class MyApp extends StatelessWidget {
                     ? ThemeMode.light
                     : ThemeMode.system,
             darkTheme: kDarkThemeData,
-            theme: ThemeData.light(
-              useMaterial3: true,
-            ).copyWith(
-              brightness: Brightness.light,
-              primaryColor: ColorManager.kColorPrimary,
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)
-                  .copyWith(background: const Color(0xff003441)),
-            ),
+            theme: kLightThemeData,
             home: StreamBuilder<ConnectivityResult>(
               stream: Connectivity().onConnectivityChanged,
               builder: (context, snapshot) {
