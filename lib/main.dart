@@ -1,4 +1,11 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:egytraveler/core/Theme/theme.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
 import 'package:egytraveler/layout/homeLayout/homelayout.dart';
 import 'package:egytraveler/modules/Auth/cubit/auth_cubit.dart';
@@ -6,20 +13,12 @@ import 'package:egytraveler/shared/bloc_observer.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 import 'package:egytraveler/shared/network/remote/dio_helper.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'layout/homeLayout/cubit/cubit.dart';
 import 'modules/Language/language_screen.dart';
-import 'modules/onBoarding/view/onboarding.dart';
-import 'modules/onBoarding/view/signInAndUp.dart';
+import 'Features/onBoarding/Presentation/view/onboarding_view.dart';
+import 'modules/Auth/view/signInAndUp.dart';
 import 'modules/splash/splash.dart';
-import 'package:flutter/services.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 
 Future<void> main() async {
   Widget widget;
@@ -39,7 +38,7 @@ Future<void> main() async {
         widget = const SignInAndUp();
       }
     } else {
-      widget = const OnBoarding();
+      widget = const OnBoardingView();
     }
   } else {
     widget = const LanguageScreen();

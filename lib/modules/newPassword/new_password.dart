@@ -8,7 +8,7 @@ import '../Auth/widget/text_filed_egypt.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
-import '../onBoarding/widget/custom_button.dart';
+import '../../Features/onBoarding/Presentation/view/widget/custom_button.dart';
 
 class NewPassword extends StatelessWidget {
   NewPassword({super.key});

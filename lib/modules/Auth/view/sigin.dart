@@ -11,7 +11,7 @@ import '../../../layout/homeLayout/cubit/cubit.dart';
 import '../../../layout/homeLayout/homelayout.dart';
 import '../../../shared/components/constants.dart';
 import '../../../shared/network/local/cache_helper.dart';
-import '../../onBoarding/widget/custom_button.dart';
+import '../../../Features/onBoarding/Presentation/view/widget/custom_button.dart';
 import '../cubit/auth_cubit.dart';
 
 class SigInScreen extends StatefulWidget {

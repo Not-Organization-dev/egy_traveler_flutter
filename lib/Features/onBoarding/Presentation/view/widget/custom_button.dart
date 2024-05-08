@@ -1,7 +1,7 @@
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 
-import '../../../shared/components/constants.dart';
+import '../../../../../shared/components/constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
               title.tr(context),
               style: TextStyle(
                 color: colorTitle,
-                fontSize: getResponsiveFontSize(context, fontSize: 22),
+                fontSize: getResponsiveFontSize(context, fontSize: 50),
                 fontWeight: FontWeight.w700,
               ),
             ),

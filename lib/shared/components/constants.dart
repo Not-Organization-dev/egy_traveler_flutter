@@ -1,7 +1,7 @@
 import 'package:egytraveler/shared/components/size_config.dart';
 import 'package:flutter/material.dart';
 import '../../layout/homeLayout/cubit/cubit.dart';
-import '../../modules/onBoarding/view/signInAndUp.dart';
+import '../../modules/Auth/view/signInAndUp.dart';
 import '../network/local/cache_helper.dart';
 
 void singOut(context) {
@@ -9,8 +9,9 @@ void singOut(context) {
     CacheHelper.clearData(key: 'isRemember');
     CacheHelper.clearData(key: 'TokenId');
     if (value == true) {
-       HomeCubit.get(context).userData = null ;
-      navigateFish(context, const SignInAndUp()); // add Login Screen here because singOut and login again
+      HomeCubit.get(context).userData = null;
+      navigateFish(context,
+          const SignInAndUp()); // add Login Screen here because singOut and login again
       debugPrint("token inside clear data : $token uid : $uid");
     }
   });
@@ -24,7 +25,6 @@ void singOut(context) {
   debugPrint('uid: $uid');
 }
 
-
 void navigateFish(BuildContext context, Widget widget) {
   Navigator.pushAndRemoveUntil(
     context,
@@ -35,7 +35,8 @@ void navigateFish(BuildContext context, Widget widget) {
         const end = Offset.zero;
         const curve = Curves.easeInOut;
 
-        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 
         var offsetAnimation = animation.drive(tween);
 
@@ -45,7 +46,7 @@ void navigateFish(BuildContext context, Widget widget) {
         );
       },
     ),
-        (route) => false,
+    (route) => false,
   );
 }
 
@@ -53,7 +54,7 @@ String? token = CacheHelper.getData(key: 'TokenId');
 
 String? uid = CacheHelper.getData(key: 'ID');
 
-String? themeModeCacheHelper = CacheHelper.getData(key: 'theme') ;
+String? themeModeCacheHelper = CacheHelper.getData(key: 'theme');
 
 bool? isRemember = CacheHelper.getData(key: 'isRemember');
 
@@ -80,4 +81,3 @@ double getScaleFactor(BuildContext context) {
     return width / 1600;
   }
 }
-

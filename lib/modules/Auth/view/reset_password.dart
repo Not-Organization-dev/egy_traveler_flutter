@@ -2,7 +2,7 @@ import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
 import 'package:egytraveler/modules/Auth/cubit/auth_cubit.dart';
 import 'package:egytraveler/modules/Auth/view/verification.dart';
-import 'package:egytraveler/modules/onBoarding/widget/custom_button.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

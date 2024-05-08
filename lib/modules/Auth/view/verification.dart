@@ -10,8 +10,8 @@ import 'package:flutter_conditional_rendering/conditional.dart';
 
 import '../../../layout/homeLayout/cubit/cubit.dart';
 import '../../../shared/components/constants.dart';
-import '../../onBoarding/view/signInAndUp.dart';
-import '../../onBoarding/widget/custom_button.dart';
+import 'signInAndUp.dart';
+import '../../../Features/onBoarding/Presentation/view/widget/custom_button.dart';
 
 class VerificationScreen extends StatelessWidget {
   VerificationScreen({super.key, required this.email});
