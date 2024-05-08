@@ -1,11 +1,9 @@
 import 'package:egytraveler/generated/assets.dart';
-import 'package:egytraveler/modules/onBoarding/widget/custom_button.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../Auth/view/sigin.dart';
-import '../../Auth/view/sigup.dart';
-
-
+import 'sigin.dart';
+import 'sigup.dart';
 
 class SignInAndUp extends StatelessWidget {
   const SignInAndUp({super.key});
@@ -16,9 +14,8 @@ class SignInAndUp extends StatelessWidget {
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage(Assets.imageLogin),
-              fit: BoxFit.cover
-          ),
+          image: DecorationImage(
+              image: AssetImage(Assets.imageLogin), fit: BoxFit.cover),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,10 +26,13 @@ class SignInAndUp extends StatelessWidget {
             CustomButton(
               colorButton: Colors.white,
               title: 'Sign up',
-              colorTitle: Colors.black, onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder:
-                    (context) => const SignUpScreen() ));
-            },
+              colorTitle: Colors.black,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignUpScreen()));
+              },
             ),
             const SizedBox(
               height: 27,
@@ -40,15 +40,16 @@ class SignInAndUp extends StatelessWidget {
             CustomButton(
               colorButton: Colors.black,
               title: 'Sign in',
-              colorTitle: Colors.white, onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder:
-                  (context) => const SigInScreen() ));
-            },
+              colorTitle: Colors.white,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SigInScreen()));
+              },
             ),
-
             const Flexible(
-              child: SizedBox(
-              ),
+              child: SizedBox(),
             ),
           ],
         ),
@@ -56,5 +57,3 @@ class SignInAndUp extends StatelessWidget {
     );
   }
 }
-
-

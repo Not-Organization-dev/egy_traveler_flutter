@@ -2,7 +2,7 @@ import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/modules/onBoarding/view/onboarding.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/onboarding_view.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,8 +29,8 @@ class LanguageConfirmButton extends StatelessWidget {
           value: true,
         ).then((value) {
           if (value == true) {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => const OnBoarding()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const OnBoardingView()));
           }
         });
       },
