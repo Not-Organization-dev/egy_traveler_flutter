@@ -5,7 +5,7 @@ import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/generated/assets.dart';
 
 import '../../../../shared/components/constants.dart';
-import '../View_model/boarding_model.dart';
+import '../Manager/boarding_model.dart';
 import 'widget/on_boarding_skip_button.dart';
 import 'widget/on_boarding_smooth_page_indicator.dart';
 
