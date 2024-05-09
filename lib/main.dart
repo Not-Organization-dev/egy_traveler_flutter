@@ -15,7 +15,7 @@ import 'package:egytraveler/shared/network/local/cache_helper.dart';
 import 'package:egytraveler/shared/network/remote/dio_helper.dart';
 
 import 'layout/homeLayout/cubit/cubit.dart';
-import 'modules/Language/language_screen.dart';
+import 'Features/Language/Presentaion/View/language_view.dart';
 import 'Features/onBoarding/Presentation/view/onboarding_view.dart';
 import 'modules/Auth/view/signInAndUp.dart';
 import 'modules/splash/splash.dart';
@@ -41,7 +41,7 @@ Future<void> main() async {
       widget = const OnBoardingView();
     }
   } else {
-    widget = const LanguageScreen();
+    widget = const LanguageView();
   }
 
   runApp(MyApp(
