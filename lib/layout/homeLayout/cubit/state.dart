@@ -2,7 +2,6 @@ abstract class HomeStates {}
 
 class HomeInitialState extends HomeStates {}
 
-
 class ChangeLocalState extends HomeStates {}
 
 class ChangeLanguageArState extends HomeStates {}
@@ -150,6 +149,7 @@ class LoadingFavoriteArticlePlace extends HomeStates {}
 class SuccessFavoriteArticlePlace extends HomeStates {}
 
 class ErrorFavoriteArticlePlace extends HomeStates {}
+
 class LoadingRemoveFavoritePlace extends HomeStates {}
 
 class SuccessRemoveFavoritePlace extends HomeStates {}
@@ -190,5 +190,8 @@ class ErrorGetAllRecommend extends HomeStates {}
 
 class DiscardChange extends HomeStates {}
 
-
 class ChangePasswordVisibilityState extends HomeStates {}
+
+class ChangePasswordVisibilityState1 extends HomeStates {}
+
+class ChangePasswordVisibilityState2 extends HomeStates {}

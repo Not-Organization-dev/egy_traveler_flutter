@@ -114,16 +114,55 @@ class AuthCubit extends Cubit<AuthState> {
     });
   }
 
-  IconData suffix = Icons.visibility_outlined;
+  IconData suffixIN = Icons.visibility_outlined;
 
-  bool isPasswordShown = true;
+  bool isPasswordShownIN = true;
 
-  void changePasswordVisibility() {
+  void changePasswordVisibilityIN() {
     debugPrint('changePasswordVisibility');
-    isPasswordShown = !isPasswordShown;
-    suffix = isPasswordShown
+    isPasswordShownIN = !isPasswordShownIN;
+    suffixIN = isPasswordShownIN
         ? Icons.visibility_outlined
         : Icons.visibility_off_outlined;
-    emit(ChangePasswordVisibilityState());
+    emit(ChangePasswordVisibilityStateIN());
+  }
+
+  IconData suffixUp = Icons.visibility_outlined;
+
+  bool isPasswordShownUp = true;
+
+  void changePasswordVisibilityUp() {
+    debugPrint('changePasswordVisibility');
+    isPasswordShownUp = !isPasswordShownUp;
+    suffixUp = isPasswordShownUp
+        ? Icons.visibility_outlined
+        : Icons.visibility_off_outlined;
+    emit(ChangePasswordVisibilityStateUp());
+  }
+
+  IconData suffix1 = Icons.visibility_outlined;
+
+  bool isPasswordShown1 = true;
+
+  void changePasswordVisibility1() {
+    debugPrint('changePasswordVisibility');
+    isPasswordShown1 = !isPasswordShown1;
+    suffix1 = isPasswordShown1
+        ? Icons.visibility_outlined
+        : Icons.visibility_off_outlined;
+    emit(ChangePasswordVisibilityState1());
+  }
+
+  IconData suffix2 = Icons.visibility_outlined;
+
+  bool isPasswordShown2 = true;
+
+  void changePasswordVisibility2() {
+    debugPrint('changePasswordVisibility');
+    isPasswordShown2 = !isPasswordShown2;
+    suffix2 = isPasswordShown2
+        ? Icons.visibility_outlined
+        : Icons.visibility_off_outlined;
+    emit(ChangePasswordVisibilityState2());
   }
 }

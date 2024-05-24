@@ -18,7 +18,7 @@ import 'layout/homeLayout/cubit/cubit.dart';
 import 'Features/Language/Presentaion/View/language_view.dart';
 import 'Features/onBoarding/Presentation/view/onboarding_view.dart';
 import 'modules/Auth/view/signInAndUp.dart';
-import 'modules/splash/splash.dart';
+import 'modules/splash/splash_view.dart';
 
 Future<void> main() async {
   Widget widget;
@@ -141,7 +141,7 @@ class MyApp extends StatelessWidget {
                   HomeCubit.get(context).getAllPlaces(page: 1);
                   HomeCubit.get(context).getAllRecomended();
                   HomeCubit.get(context).getAllArticles();
-                  return SplashScreen(startWidget: startWidget);
+                  return SplashView(startWidget: startWidget);
                 }
               },
             ),

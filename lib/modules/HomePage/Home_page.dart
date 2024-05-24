@@ -264,6 +264,8 @@ class _HomePageState extends State<HomePage> {
                                             cubit.placesModelRecomended?.data
                                                     ?.places?[index].name ??
                                                 '',
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               color: ColorManager.kColorPrimary,
                                               fontSize: 15,
@@ -277,7 +279,8 @@ class _HomePageState extends State<HomePage> {
                                             cubit.placesModelRecomended?.data
                                                     ?.places?[index].location ??
                                                 '',
-                                            maxLines: 2,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
                                             style: const TextStyle(
                                               color: Color(0xff606060),
                                               fontSize: 12,
@@ -384,6 +387,7 @@ class _HomePageState extends State<HomePage> {
                                     cubit.placesModel?.data?.places?[index]
                                             .name ??
                                         '',
+                                    maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       color: ColorManager.kColorPrimary,

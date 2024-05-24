@@ -538,4 +538,28 @@ class HomeCubit extends Cubit<HomeStates> {
         : Icons.visibility_off_outlined;
     emit(ChangePasswordVisibilityState());
   }
+
+  IconData suffix1 = Icons.visibility_outlined;
+
+  bool isPasswordShown1 = true;
+
+  void changePasswordVisibility1() {
+    isPasswordShown1 = !isPasswordShown1;
+    suffix1 = isPasswordShown1
+        ? Icons.visibility_outlined
+        : Icons.visibility_off_outlined;
+    emit(ChangePasswordVisibilityState1());
+  }
+
+  IconData suffix2 = Icons.visibility_outlined;
+
+  bool isPasswordShown2 = true;
+
+  void changePasswordVisibility2() {
+    isPasswordShown2 = !isPasswordShown2;
+    suffix2 = isPasswordShown2
+        ? Icons.visibility_outlined
+        : Icons.visibility_off_outlined;
+    emit(ChangePasswordVisibilityState2());
+  }
 }
