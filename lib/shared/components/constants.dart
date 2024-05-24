@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/sign_in_and_up_view.dart';
 import 'package:egytraveler/shared/components/size_config.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 
@@ -12,7 +12,7 @@ void singOut(context) {
     if (value == true) {
       HomeCubit.get(context).userData = null;
       navigateFish(context,
-          const SignInAndUp()); // add Login Screen here because singOut and login again
+          const SignInAndUpView()); // add Login Screen here because singOut and login again
       debugPrint("token inside clear data : $token uid : $uid");
     }
   });

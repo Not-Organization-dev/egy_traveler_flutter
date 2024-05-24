@@ -9,7 +9,17 @@ abstract class Styles {
   //Fonts
   static String kPrimaryFontStyle = GoogleFonts.montserrat().fontFamily!;
 
+  //Thin Text
+
+  static TextStyle textThin10 = TextStyle(
+    fontFamily: kPrimaryFontStyle,
+    fontSize: 10,
+    color: ColorManager.kColorHit,
+    fontWeight: FontWeight.w100,
+  );
+
   //Regular text
+
   static TextStyle textRegular12 = TextStyle(
     fontFamily: kPrimaryFontStyle,
     fontSize: 12,
@@ -69,7 +79,7 @@ abstract class Styles {
   static TextStyle textBold20 = TextStyle(
     fontFamily: kPrimaryFontStyle,
     fontSize: 20,
-    color: Colors.white,
+    // color: Colors.white,
     fontWeight: FontWeight.w700,
   );
   static TextStyle textWhiteBold22 = TextStyle(

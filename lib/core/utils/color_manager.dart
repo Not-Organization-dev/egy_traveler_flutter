@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 //TODO: Add all colors here & make sure to add light mode colors here before using them
 
 abstract class ColorManager {
+  static Color kDarkColorBackgroundLight = const Color(0xff57767e);
+
   static Color kColorPrimary = const Color(0xffE09955);
   static Color kDarkColorBackground = const Color(0xff003441);
   // static Color kColorPrimaryDark = const Color(0xffB37B21);
