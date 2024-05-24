@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/core/utils/styles.dart';
-import '../../../../../generated/assets.dart';
+import 'package:egytraveler/generated/assets.dart';
 
 class CustomChooseLanguage extends StatelessWidget {
   const CustomChooseLanguage({

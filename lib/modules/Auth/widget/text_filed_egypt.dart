@@ -1,7 +1,7 @@
-import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 
-import '../../../shared/components/constants.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/shared/components/constants.dart';
 
 class TextFiledEgypt extends StatelessWidget {
   TextFiledEgypt(

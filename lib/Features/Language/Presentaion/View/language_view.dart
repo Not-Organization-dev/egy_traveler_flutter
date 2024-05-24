@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widget/language_screen_view_body.dart';
+import 'package:egytraveler/Features/Language/Presentaion/View/widget/language_screen_view_body.dart';
 
 class LanguageView extends StatelessWidget {
   const LanguageView({super.key});

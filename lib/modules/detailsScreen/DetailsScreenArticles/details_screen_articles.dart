@@ -1,13 +1,13 @@
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:appbar_animated/appbar_animated.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../generated/assets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
-import 'package:appbar_animated/appbar_animated.dart';
 
-import '../../../core/utils/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
 
 class DetailsScreenArticles extends StatefulWidget {
   const DetailsScreenArticles(

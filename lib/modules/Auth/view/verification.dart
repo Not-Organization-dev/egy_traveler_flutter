@@ -1,17 +1,16 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
-import 'package:egytraveler/modules/Auth/cubit/auth_cubit.dart';
-import 'package:egytraveler/modules/Auth/widget/custom_button_otp_code.dart';
-import 'package:egytraveler/modules/Auth/widget/text_filed_egypt.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 
-import '../../../layout/homeLayout/cubit/cubit.dart';
-import '../../../shared/components/constants.dart';
-import 'signInAndUp.dart';
-import '../../../Features/onBoarding/Presentation/view/widget/custom_button.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/modules/Auth/AuthCubit/auth_cubit.dart';
+import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
+import 'package:egytraveler/modules/Auth/widget/custom_button_otp_code.dart';
+import 'package:egytraveler/modules/Auth/widget/text_filed_egypt.dart';
+import 'package:egytraveler/shared/components/constants.dart';
 
 class VerificationScreen extends StatelessWidget {
   VerificationScreen({super.key, required this.email});

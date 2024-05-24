@@ -1,18 +1,18 @@
 import 'package:bottom_bar/bottom_bar.dart';
-import 'package:egytraveler/modules/favorite/favorite_screen.dart';
-import 'package:egytraveler/modules/profile/settings_screen.dart';
-import 'package:egytraveler/shared/components/constants.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 
-import '../../generated/assets.dart';
-import '../../modules/my_trips/my_trips_screen.dart';
-import '../../modules/profile/profile_screen.dart';
-import '../../core/utils/color_manager.dart';
-import 'cubit/cubit.dart';
-import 'cubit/state.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/favorite/favorite_screen.dart';
+import 'package:egytraveler/modules/my_trips/my_trips_screen.dart';
+import 'package:egytraveler/modules/profile/profile_screen.dart';
+import 'package:egytraveler/modules/profile/settings_screen.dart';
+import 'package:egytraveler/shared/components/constants.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key});

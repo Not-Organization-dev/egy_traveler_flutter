@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/utils/color_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 
 class Content extends StatelessWidget {
   const Content(

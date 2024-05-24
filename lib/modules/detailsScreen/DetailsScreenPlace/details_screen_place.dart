@@ -1,20 +1,20 @@
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../generated/assets.dart';
+import 'package:appbar_animated/appbar_animated.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:location/location.dart';
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
-import 'package:appbar_animated/appbar_animated.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:location/location.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../../../core/utils/color_manager.dart';
-import '../../Recommend/recommend_screen.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/Recommend/recommend_screen.dart';
 
 class DetailsScreenPlace extends StatefulWidget {
   const DetailsScreenPlace(

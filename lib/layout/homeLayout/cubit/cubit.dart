@@ -1,31 +1,31 @@
 import 'dart:io';
 
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:location/location.dart';
+
+import 'package:egytraveler/core/resources/string_manager.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/model/AtriclesModelById/AtriclesModelById.dart';
+import 'package:egytraveler/model/articlesModel/articles_model.dart';
 import 'package:egytraveler/model/eventByIdModel/EventByIdModel.dart';
+import 'package:egytraveler/model/eventmodel/EventModel.dart';
+import 'package:egytraveler/model/favoriteModel/FavoriteModel.dart';
+import 'package:egytraveler/model/placeByIdModel/PlaceByIdModel.dart';
+import 'package:egytraveler/model/placesModel/PalcesModel.dart';
 import 'package:egytraveler/model/recommend/RecommendModel.dart';
 import 'package:egytraveler/model/tripsByIdModel/TripsByIdModel.dart';
 import 'package:egytraveler/model/tripsModel/TripsModel.dart';
-import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../model/AtriclesModelById/AtriclesModelById.dart';
-import '../../../model/articlesModel/ArticlesModel.dart';
-import '../../../model/eventmodel/EventModel.dart';
-import '../../../model/favoriteModel/FavoriteModel.dart';
-import '../../../model/placeByIdModel/PlaceByIdModel.dart';
-import '../../../model/placesModel/PalcesModel.dart';
-import '../../../model/usermodel/UserModel.dart';
-import '../../../modules/Event/event_screen.dart';
-import '../../../modules/HomePage/Home_page.dart';
-import '../../../modules/Trips/trips_screen.dart';
-import '../../../modules/profile/profile_screen.dart';
-import '../../../shared/components/constants.dart';
-import '../../../shared/network/local/cache_helper.dart';
-import '../../../shared/network/remote/dio_helper.dart';
-import '../../../core/resources/string_manager.dart';
-import 'state.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:location/location.dart';
+import 'package:egytraveler/model/usermodel/UserModel.dart';
+import 'package:egytraveler/modules/Event/event_screen.dart';
+import 'package:egytraveler/modules/HomePage/Home_page.dart';
+import 'package:egytraveler/modules/Trips/trips_screen.dart';
+import 'package:egytraveler/modules/profile/profile_screen.dart';
+import 'package:egytraveler/shared/components/constants.dart';
+import 'package:egytraveler/shared/network/local/cache_helper.dart';
+import 'package:egytraveler/shared/network/remote/dio_helper.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
   HomeCubit() : super(HomeInitialState());

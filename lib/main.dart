@@ -4,21 +4,20 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'package:egytraveler/Features/Language/Presentaion/View/language_view.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/onboarding_view.dart';
+import 'package:egytraveler/Features/splash/Presentation/View/splash_view.dart';
 import 'package:egytraveler/core/Theme/theme.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
 import 'package:egytraveler/layout/homeLayout/homelayout.dart';
-import 'package:egytraveler/modules/Auth/cubit/auth_cubit.dart';
+import 'package:egytraveler/modules/Auth/AuthCubit/auth_cubit.dart';
+import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
 import 'package:egytraveler/shared/bloc_observer.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 import 'package:egytraveler/shared/network/remote/dio_helper.dart';
-
-import 'layout/homeLayout/cubit/cubit.dart';
-import 'Features/Language/Presentaion/View/language_view.dart';
-import 'Features/onBoarding/Presentation/view/onboarding_view.dart';
-import 'modules/Auth/view/signInAndUp.dart';
-import 'Features/splash/Presentation/View/splash_view.dart';
 
 Future<void> main() async {
   Widget widget;

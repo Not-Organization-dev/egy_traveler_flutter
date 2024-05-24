@@ -1,14 +1,15 @@
-import 'Data.dart';
+import 'data.dart';
 
 class ArticlesModel {
   ArticlesModel({
-      String? status, 
-      num? results, 
-      Data? data,}){
+    String? status,
+    num? results,
+    Data? data,
+  }) {
     _status = status;
     _results = results;
     _data = data;
-}
+  }
 
   ArticlesModel.fromJson(dynamic json) {
     _status = json['status'];
@@ -32,5 +33,4 @@ class ArticlesModel {
     }
     return map;
   }
-
 }

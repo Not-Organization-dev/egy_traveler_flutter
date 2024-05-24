@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:egytraveler/Features/Language/Presentaion/View/widget/custom_choose_language.dart';
+import 'package:egytraveler/Features/Language/Presentaion/View/widget/language_confirm_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 import 'package:egytraveler/generated/assets.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/Features/Language/Presentaion/View/widget/custom_choose_language.dart';
-import 'package:egytraveler/Features/Language/Presentaion/View/widget/language_confirm_button.dart';
 
 class LanguageScreenViewBody extends StatelessWidget {
   const LanguageScreenViewBody({

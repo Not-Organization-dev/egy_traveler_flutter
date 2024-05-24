@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 // import 'package:egytraveler/modules/splash/Widgets/animated_logo.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../../generated/assets.dart';
-import '../../../../../shared/components/constants.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/shared/components/constants.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({

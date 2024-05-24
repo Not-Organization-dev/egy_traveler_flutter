@@ -1,15 +1,15 @@
+import 'package:appbar_animated/appbar_animated.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:intl/intl.dart';
+
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/generated/assets.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-import '../../../generated/assets.dart';
-import '../../../core/utils/color_manager.dart';
-import '../DetailsScreenPlaceByTrip/details_screen_place_trip.dart';
-import 'package:appbar_animated/appbar_animated.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlaceByTrip/details_screen_place_trip.dart';
 
 class DetailsTripsScreen extends StatelessWidget {
   const DetailsTripsScreen({super.key, required this.id});

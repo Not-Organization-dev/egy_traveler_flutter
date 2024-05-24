@@ -1,10 +1,11 @@
-import 'Articles.dart';
+import 'articles.dart';
 
 class Data {
   Data({
-      List<Articles>? articles,}){
+    List<Articles>? articles,
+  }) {
     _articles = articles;
-}
+  }
 
   Data.fromJson(dynamic json) {
     if (json['articles'] != null) {
@@ -25,5 +26,4 @@ class Data {
     }
     return map;
   }
-
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:egytraveler/Features/splash/Presentation/View/Widgets/splash_view_body.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-
-import 'Widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
   final Widget startWidget;

@@ -1,9 +1,9 @@
-import 'package:egytraveler/generated/assets.dart';
-import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
-import 'sigin.dart';
-import 'sigup.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/modules/Auth/view/sigin.dart';
+import 'package:egytraveler/modules/Auth/view/sigup.dart';
 
 class SignInAndUp extends StatelessWidget {
   const SignInAndUp({super.key});

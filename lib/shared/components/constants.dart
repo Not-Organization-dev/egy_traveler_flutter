@@ -1,8 +1,9 @@
-import 'package:egytraveler/shared/components/size_config.dart';
 import 'package:flutter/material.dart';
-import '../../layout/homeLayout/cubit/cubit.dart';
-import '../../modules/Auth/view/signInAndUp.dart';
-import '../network/local/cache_helper.dart';
+
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
+import 'package:egytraveler/shared/components/size_config.dart';
+import 'package:egytraveler/shared/network/local/cache_helper.dart';
 
 void singOut(context) {
   CacheHelper.clearData(key: 'ID').then((value) {

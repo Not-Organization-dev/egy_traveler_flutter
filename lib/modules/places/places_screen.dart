@@ -1,19 +1,19 @@
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../generated/assets.dart';
-import '../../layout/homeLayout/cubit/cubit.dart';
-import '../../core/utils/color_manager.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
-import 'package:skeletonizer/skeletonizer.dart';
 import 'package:number_pagination/number_pagination.dart';
 import 'package:number_paginator/number_paginator.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
-import '../detailsScreen/DetailsScreenPlace/details_screen_place.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
 
 class PlacesScreen extends StatefulWidget {
   const PlacesScreen({super.key});

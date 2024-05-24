@@ -1,15 +1,14 @@
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../generated/assets.dart';
-import '../../layout/homeLayout/cubit/cubit.dart';
-import '../../core/utils/color_manager.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
-import '../detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
 
 class ArticlesScreen extends StatelessWidget {
   const ArticlesScreen({super.key});

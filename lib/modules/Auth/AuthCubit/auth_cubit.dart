@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../shared/network/remote/dio_helper.dart';
-import '../../../core/resources/string_manager.dart';
+import 'package:egytraveler/core/resources/string_manager.dart';
+import 'package:egytraveler/shared/network/remote/dio_helper.dart';
 
 part 'auth_state.dart';
 

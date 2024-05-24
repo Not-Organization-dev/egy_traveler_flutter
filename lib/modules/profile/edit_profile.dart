@@ -1,15 +1,16 @@
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/modules/profile/widget/text_from_filed_edit_profile.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:cherry_toast/cherry_toast.dart';
+import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
-import 'package:cherry_toast/cherry_toast.dart';
-import '../../core/utils/color_manager.dart';
-import '../../core/resources/font_manager.dart';
-import '../newPassword/new_password.dart';
-import 'package:cherry_toast/resources/arrays.dart';
+
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/resources/font_manager.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/newPassword/new_password.dart';
+import 'package:egytraveler/modules/profile/widget/text_from_filed_edit_profile.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});

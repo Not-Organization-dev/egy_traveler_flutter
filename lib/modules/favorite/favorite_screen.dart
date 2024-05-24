@@ -1,13 +1,14 @@
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
-import '../../generated/assets.dart';
-import '../detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
+
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
 
 class FavoriteScreen extends StatefulWidget {
   FavoriteScreen({super.key});

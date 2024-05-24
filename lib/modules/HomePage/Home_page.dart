@@ -1,18 +1,19 @@
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/widgets.dart';
-import '../../generated/assets.dart';
-import '../../core/utils/color_manager.dart';
-import '../articles/articles_screen.dart';
-import '../detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
-import '../detailsScreen/DetailsScreenPlace/details_screen_place.dart';
-import '../places/places_screen.dart';
-import '../search/search_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/generated/assets.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/articles/articles_screen.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
+import 'package:egytraveler/modules/places/places_screen.dart';
+import 'package:egytraveler/modules/search/search_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

@@ -1,13 +1,13 @@
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../../core/utils/color_manager.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../detailsScreen/DetailsScreenPlace/details_screen_place.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

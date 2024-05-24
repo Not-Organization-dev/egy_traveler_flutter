@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/modules/Auth/view/signInAndUp.dart';
+import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 

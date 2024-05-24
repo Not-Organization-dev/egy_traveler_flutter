@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import '../../components/constants.dart';
-import '../../../core/resources/string_manager.dart';
+import 'package:egytraveler/shared/components/constants.dart';
+import 'package:egytraveler/core/resources/string_manager.dart';
 
 class DioHelper {
   static late Dio dio;

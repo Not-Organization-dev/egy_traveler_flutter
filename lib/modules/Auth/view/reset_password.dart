@@ -1,20 +1,21 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
-import 'package:egytraveler/modules/Auth/cubit/auth_cubit.dart';
-import 'package:egytraveler/modules/Auth/view/verification.dart';
-import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 
-import '../../../shared/components/constants.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
+import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/modules/Auth/AuthCubit/auth_cubit.dart';
+import 'package:egytraveler/modules/Auth/view/verification.dart';
+
+import 'package:egytraveler/shared/components/constants.dart';
 
 class ResetPassword extends StatelessWidget {
   ResetPassword({super.key});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  TextEditingController emailController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

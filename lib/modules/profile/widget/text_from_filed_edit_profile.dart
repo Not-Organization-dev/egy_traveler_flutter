@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/resources/font_manager.dart';
+import 'package:egytraveler/core/resources/font_manager.dart';
 
 class TextFromFiledEditProfile extends StatelessWidget {
   const TextFromFiledEditProfile({

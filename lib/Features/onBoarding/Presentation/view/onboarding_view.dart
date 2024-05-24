@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+
+import 'package:egytraveler/Features/onBoarding/Presentation/Manager/boarding_model.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/on_boarding_skip_button.dart';
+import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/on_boarding_smooth_page_indicator.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/generated/assets.dart';
-
-import '../../../../shared/components/constants.dart';
-import '../Manager/boarding_model.dart';
-import 'widget/on_boarding_skip_button.dart';
-import 'widget/on_boarding_smooth_page_indicator.dart';
+import 'package:egytraveler/shared/components/constants.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});

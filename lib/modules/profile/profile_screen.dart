@@ -1,13 +1,14 @@
+import 'package:cherry_toast/cherry_toast.dart';
+import 'package:cherry_toast/resources/arrays.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
 import 'package:egytraveler/model/usermodel/UserModel.dart';
-import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:flutter/material.dart';
-import 'package:cherry_toast/cherry_toast.dart';
-import 'package:cherry_toast/resources/arrays.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../shared/components/constants.dart';
+import 'package:egytraveler/shared/components/constants.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
