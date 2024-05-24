@@ -6,7 +6,7 @@ import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
-
+import '../../../generated/assets.dart';
 import '../../../layout/homeLayout/cubit/cubit.dart';
 import '../../../layout/homeLayout/homelayout.dart';
 import '../../../shared/components/constants.dart';
@@ -35,7 +35,7 @@ class _SigInScreenState extends State<SigInScreen> {
       listener: (context, state) async {
         if (state is SingInSuccessState) {
           CherryToast.success(
-            title: Text(state.successModel['status']),
+            title: Text('Welcome back!'.tr(context)),
             animationType: AnimationType.fromTop,
           ).show(context);
           await CacheHelper.saveData(
@@ -71,6 +71,22 @@ class _SigInScreenState extends State<SigInScreen> {
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
+            title: Image.asset(
+              Assets.image6,
+              width: 100,
+              height: 100,
+            ),
+            centerTitle: true,
+            leading: IconButton(
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            backgroundColor: const Color(0xff57767e),
             elevation: 0,
           ),
           body: SingleChildScrollView(
@@ -139,13 +155,13 @@ class _SigInScreenState extends State<SigInScreen> {
                           keyboardType: TextInputType.visiblePassword,
                           suffixIcon: IconButton(
                             onPressed: () {
-                              cubit.changePasswordVisibility();
+                              cubit.changePasswordVisibilityIN();
                             },
                             icon: Icon(
-                              cubit.suffix,
+                              cubit.suffixIN,
                             ),
                           ),
-                          obscureText: cubit.isPasswordShown,
+                          obscureText: cubit.isPasswordShownIN,
                           title: 'Password',
                           iconData: Icons.lock,
                           validator: (value) {

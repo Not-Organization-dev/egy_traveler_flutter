@@ -13,8 +13,13 @@ class Assets {
   static const String imageOnboarding1 = 'assets/image/onboarding1.jpeg';
   static const String imageOnboarding2 = 'assets/image/onboarding2.jpeg';
   static const String imageOnboarding3 = 'assets/image/onboarding3.jpeg';
-  static const String imageOpenmojiFlagEgypt = 'assets/image/openmoji_flag-egypt.png';
+  static const String imageOpenmojiFlagEgypt =
+      'assets/image/openmoji_flag-egypt.png';
   static const String langAr = 'assets/lang/ar.json';
   static const String langEn = 'assets/lang/en.json';
 
+  // svg
+
+  static const String svgTextLogo = 'assets/svg/Text.svg';
+  static const String svgBusLogo = 'assets/svg/Bus.svg';
 }

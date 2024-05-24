@@ -147,13 +147,13 @@ class VerificationScreen extends StatelessWidget {
                                 title: 'Password',
                                 suffixIcon: IconButton(
                                   onPressed: () {
-                                    cubit.changePasswordVisibility();
+                                    cubit.changePasswordVisibility1();
                                   },
                                   icon: Icon(
-                                    cubit.suffix,
+                                    cubit.suffix1,
                                   ),
                                 ),
-                                obscureText: cubit.isPasswordShown,
+                                obscureText: cubit.isPasswordShown1,
                                 iconData: Icons.lock,
                                 validator: (value) {
                                   if (value!.isEmpty) {
@@ -174,13 +174,13 @@ class VerificationScreen extends StatelessWidget {
                                 iconData: Icons.lock,
                                 suffixIcon: IconButton(
                                   onPressed: () {
-                                    cubit.changePasswordVisibility();
+                                    cubit.changePasswordVisibility2();
                                   },
                                   icon: Icon(
-                                    cubit.suffix,
+                                    cubit.suffix2,
                                   ),
                                 ),
-                                obscureText: cubit.isPasswordShown,
+                                obscureText: cubit.isPasswordShown2,
                                 validator: (value) {
                                   if (value!.isEmpty) {
                                     return 'Password must not be empty'
