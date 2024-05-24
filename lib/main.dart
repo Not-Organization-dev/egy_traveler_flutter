@@ -18,7 +18,7 @@ import 'layout/homeLayout/cubit/cubit.dart';
 import 'Features/Language/Presentaion/View/language_view.dart';
 import 'Features/onBoarding/Presentation/view/onboarding_view.dart';
 import 'modules/Auth/view/signInAndUp.dart';
-import 'modules/splash/splash_view.dart';
+import 'Features/splash/Presentation/View/splash_view.dart';
 
 Future<void> main() async {
   Widget widget;
