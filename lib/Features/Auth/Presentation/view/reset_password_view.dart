@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 
-import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
+import 'package:egytraveler/core/Widgets/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/modules/Auth/AuthCubit/auth_cubit.dart';
-import 'package:egytraveler/modules/Auth/view/verification.dart';
+import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/verification_view.dart';
 
 import 'package:egytraveler/shared/components/constants.dart';
 
-class ResetPassword extends StatelessWidget {
-  ResetPassword({super.key});
+class ResetPasswordView extends StatelessWidget {
+  ResetPasswordView({super.key});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   final TextEditingController emailController = TextEditingController();
@@ -30,7 +30,7 @@ class ResetPassword extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    VerificationScreen(email: emailController.value.text)),
+                    VerificationView(email: emailController.value.text)),
           );
         } else if (state is ResetPasswordError) {
           CherryToast.error(

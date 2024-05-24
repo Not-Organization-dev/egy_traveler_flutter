@@ -1,19 +1,20 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/custom_button_otp_code.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/text_filed_egypt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 
-import 'package:egytraveler/Features/onBoarding/Presentation/view/widget/custom_button.dart';
+import 'package:egytraveler/core/Widgets/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/modules/Auth/AuthCubit/auth_cubit.dart';
-import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
-import 'package:egytraveler/modules/Auth/widget/custom_button_otp_code.dart';
-import 'package:egytraveler/modules/Auth/widget/text_filed_egypt.dart';
+import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/sign_in_and_up_view.dart';
+
 import 'package:egytraveler/shared/components/constants.dart';
 
-class VerificationScreen extends StatelessWidget {
-  VerificationScreen({super.key, required this.email});
+class VerificationView extends StatelessWidget {
+  VerificationView({super.key, required this.email});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   final TextEditingController otpController = TextEditingController();
@@ -38,7 +39,7 @@ class VerificationScreen extends StatelessWidget {
             title: Text(state.successModel['message']),
             animationType: AnimationType.fromTop,
           ).show(context);
-          navigateFish(context, const SignInAndUp());
+          navigateFish(context, const SignInAndUpView());
         } else if (state is OtpError) {
           CherryToast.error(
                   title: const Text("Error"),
