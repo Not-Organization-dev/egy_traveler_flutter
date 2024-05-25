@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:egytraveler/generated/assets.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/View/Widgets/bottom_navbar.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/View/Widgets/home_drawer.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/View/Widgets/bottom_navbar.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/View/Widgets/home_drawer.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key});

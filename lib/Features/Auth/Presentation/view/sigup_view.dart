@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
 
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/View/homelayout.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/View/homelayout.dart';
 import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';

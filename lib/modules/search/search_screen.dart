@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
 
 class SearchScreen extends StatefulWidget {

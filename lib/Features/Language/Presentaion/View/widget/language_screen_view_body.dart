@@ -6,8 +6,8 @@ import 'package:egytraveler/Features/Language/Presentaion/View/widget/language_c
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 import 'package:egytraveler/generated/assets.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 
 class LanguageScreenViewBody extends StatelessWidget {
   const LanguageScreenViewBody({

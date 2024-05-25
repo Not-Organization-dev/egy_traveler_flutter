@@ -12,8 +12,8 @@ import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_in_widge
 import 'package:egytraveler/Features/Auth/Presentation/view/widget/text_filed_egypt.dart';
 import 'package:egytraveler/core/Widgets/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/View/homelayout.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/View/homelayout.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 

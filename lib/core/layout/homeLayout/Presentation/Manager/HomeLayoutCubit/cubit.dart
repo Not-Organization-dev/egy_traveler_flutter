@@ -7,7 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:location/location.dart';
 
 import 'package:egytraveler/core/resources/string_manager.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/model/AtriclesModelById/AtriclesModelById.dart';
 import 'package:egytraveler/model/articlesModel/articles_model.dart';
 import 'package:egytraveler/model/eventByIdModel/EventByIdModel.dart';
@@ -20,7 +20,7 @@ import 'package:egytraveler/model/tripsByIdModel/TripsByIdModel.dart';
 import 'package:egytraveler/model/tripsModel/TripsModel.dart';
 import 'package:egytraveler/model/usermodel/UserModel.dart';
 import 'package:egytraveler/modules/Event/event_screen.dart';
-import 'package:egytraveler/modules/HomePage/Home_page.dart';
+import 'package:egytraveler/Features/Home/Home_page.dart';
 import 'package:egytraveler/modules/Trips/trips_screen.dart';
 import 'package:egytraveler/modules/profile/profile_screen.dart';
 import 'package:egytraveler/shared/components/constants.dart';

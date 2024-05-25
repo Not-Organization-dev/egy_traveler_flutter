@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/styles.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/View/Widgets/language_button.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/View/Widgets/language_button.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
 import 'package:egytraveler/modules/favorite/favorite_screen.dart';
 import 'package:egytraveler/modules/my_trips/my_trips_screen.dart';
 import 'package:egytraveler/modules/profile/profile_screen.dart';

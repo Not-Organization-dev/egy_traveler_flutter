@@ -12,8 +12,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/generated/assets.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/modules/Recommend/recommend_screen.dart';
 
 class DetailsScreenPlace extends StatefulWidget {
