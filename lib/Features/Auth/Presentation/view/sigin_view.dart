@@ -1,18 +1,19 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
-import 'package:egytraveler/Features/Auth/Presentation/view/reset_password_view.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
+import 'package:egytraveler/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 
+import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_in_widgets/reset_password_text_button.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_in_widgets/sign_in_form_header.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/text_filed_egypt.dart';
 import 'package:egytraveler/core/Widgets/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/generated/assets.dart';
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/homelayout.dart';
-import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
-
-import 'package:egytraveler/Features/Auth/Presentation/view/widget/text_filed_egypt.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/View/homelayout.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 
@@ -71,65 +72,19 @@ class _SigInViewState extends State<SigInView> {
       builder: (context, state) {
         var cubit = AuthCubit.get(context);
         return Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-            title: Image.asset(
-              Assets.image6,
-              width: 100,
-              height: 100,
-            ),
-            centerTitle: true,
-            leading: IconButton(
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-            backgroundColor: const Color(0xff57767e),
-            elevation: 0,
-          ),
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 80.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
                     height: 20,
                   ),
-                  Text(
-                    'Welcome'.tr(context),
-                    style: TextStyle(
-                      color: const Color(0xFF12121D),
-                      fontSize: getResponsiveFontSize(context, fontSize: 28),
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+                  const SignInFormHeader(),
                   const SizedBox(
-                    height: 3,
-                  ),
-                  Text(
-                    'Sign up with Social of fill the form to continue.'
-                        .tr(context),
-                    style: TextStyle(
-                      color: const Color(0x9912121D),
-                      fontSize: getResponsiveFontSize(context, fontSize: 12),
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Container(
-                    width: 315,
-                    height: 0.50,
-                    decoration: const BoxDecoration(color: Color(0x4C12121D)),
-                  ),
-                  const SizedBox(
-                    height: 25,
+                    height: 50,
                   ),
                   Form(
                     key: formKey,
@@ -173,69 +128,11 @@ class _SigInViewState extends State<SigInView> {
                             return null;
                           },
                         ),
-                        Row(
-                          children: [
-                            const Spacer(),
-                            TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            ResetPasswordView()));
-                              },
-                              child: Text(
-                                'Reset Password'.tr(context),
-                                style: TextStyle(
-                                  color: const Color(0xFF3895A4),
-                                  fontSize: getResponsiveFontSize(context,
-                                      fontSize: 15),
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        const ResetPasswordTextButton(),
                         const SizedBox(
                           height: 25,
                         ),
-                        Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isActive = !isActive;
-                                });
-                              },
-                              child: isActive == true
-                                  ? const CircleAvatar(
-                                      radius: 12,
-                                      backgroundColor: Color(0xFF3895A4),
-                                      child: Icon(
-                                        Icons.check,
-                                        color: Colors.white,
-                                        size: 15,
-                                      ))
-                                  : const CircleAvatar(
-                                      radius: 12,
-                                      backgroundColor: Color(0x0C12121D),
-                                    ),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              'Remember me next time'.tr(context),
-                              softWrap: true,
-                              style: TextStyle(
-                                color: const Color(0x9912121D),
-                                fontSize: getResponsiveFontSize(context,
-                                    fontSize: 15),
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
-                        ),
+                        _buildRememberMe(context),
                         const SizedBox(
                           height: 100,
                         ),
@@ -249,13 +146,7 @@ class _SigInViewState extends State<SigInView> {
                                   title: 'Sign in',
                                   colorTitle: Colors.white,
                                   onTap: () {
-                                    if (formKey.currentState!.validate()) {
-                                      print(emailController.text);
-                                      print(passwordController.text);
-                                      AuthCubit.get(context).userLogin(
-                                          email: emailController.text,
-                                          password: passwordController.text);
-                                    }
+                                    _sginInFormValidationMethod(context);
                                   });
                             },
                             fallbackBuilder: (context) {
@@ -271,6 +162,50 @@ class _SigInViewState extends State<SigInView> {
           ),
         );
       },
+    );
+  }
+
+  void _sginInFormValidationMethod(BuildContext context) {
+    if (formKey.currentState!.validate()) {
+      print(emailController.text);
+      print(passwordController.text);
+      AuthCubit.get(context).userLogin(
+          email: emailController.text, password: passwordController.text);
+    }
+  }
+
+  Row _buildRememberMe(BuildContext context) {
+    return Row(
+      children: [
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              isActive = !isActive;
+            });
+          },
+          child: isActive == true
+              ? const CircleAvatar(
+                  radius: 12,
+                  backgroundColor: Color(0xFF3895A4),
+                  child: Icon(
+                    Icons.check,
+                    color: Colors.white,
+                    size: 15,
+                  ))
+              : CircleAvatar(
+                  radius: 12,
+                  backgroundColor: ColorManager.kColorIdle,
+                ),
+        ),
+        const SizedBox(
+          width: 10,
+        ),
+        Text(
+          'Remember me next time'.tr(context),
+          softWrap: true,
+          style: Styles.textThin10,
+        ),
+      ],
     );
   }
 }

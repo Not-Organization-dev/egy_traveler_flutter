@@ -23,5 +23,7 @@ abstract class ColorManager {
 
   static Color kColorHit = const Color(0xff696969);
 
+  // static Color  kSmallContainersColor = const Color(0xffD9D9D9);
+
   static Color kColorSubTitle = const Color(0xffABABAB);
 }

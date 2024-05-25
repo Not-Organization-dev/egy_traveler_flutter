@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 
-class FormHeader extends StatelessWidget {
-  const FormHeader({super.key});
+class SignUpFormHeader extends StatelessWidget {
+  const SignUpFormHeader({super.key});
 
   @override
   Widget build(BuildContext context) {

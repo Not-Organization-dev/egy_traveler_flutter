@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage> {
         var cubit = HomeCubit.get(context);
         return Scaffold(
           body: Container(
-            color: const Color(0xff003441),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: CustomScrollView(

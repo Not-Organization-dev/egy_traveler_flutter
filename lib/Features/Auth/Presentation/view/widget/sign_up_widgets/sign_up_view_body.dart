@@ -1,4 +1,4 @@
-import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/form_header.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/sgin_up_form_header.dart';
 import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/password_field.dart';
 import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/sign_up_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
@@ -35,7 +35,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 20),
-        const FormHeader(),
+        const SignUpFormHeader(),
         const SizedBox(height: 25),
         Form(
           key: formKey,

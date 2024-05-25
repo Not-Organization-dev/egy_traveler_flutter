@@ -76,6 +76,12 @@ abstract class Styles {
     fontWeight: FontWeight.w700,
   );
 
+  static TextStyle textBold18 = TextStyle(
+    fontFamily: kPrimaryFontStyle,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+  );
+
   static TextStyle textBold20 = TextStyle(
     fontFamily: kPrimaryFontStyle,
     fontSize: 20,

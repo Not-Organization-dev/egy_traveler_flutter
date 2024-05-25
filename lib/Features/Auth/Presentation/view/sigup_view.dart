@@ -1,4 +1,4 @@
-import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/sign_up_form.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/sign_up_view_body.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +6,7 @@ import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
 
 import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/homelayout.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/View/homelayout.dart';
 import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
