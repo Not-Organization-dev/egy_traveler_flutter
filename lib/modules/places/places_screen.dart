@@ -4,26 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
-import 'package:number_pagination/number_pagination.dart';
 import 'package:number_paginator/number_paginator.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:egytraveler/generated/assets.dart';
 import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
 import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
 
 class PlacesScreen extends StatefulWidget {
   const PlacesScreen({super.key});
-
   @override
   State<PlacesScreen> createState() => _PlacesScreenState();
 }
 
 class _PlacesScreenState extends State<PlacesScreen> {
-  var selectedPageNumber = 1;
+  var selectedPageNumber = 0;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -60,18 +57,6 @@ class _PlacesScreenState extends State<PlacesScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    /* const SizedBox(
-                      height: 25,
-                    ),
-                    Text(
-                      'Places'.tr(context),
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Color(0xFFE09955),
-                        fontSize: 24,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),*/
                     const SizedBox(
                       height: 8,
                     ),
@@ -80,95 +65,125 @@ class _PlacesScreenState extends State<PlacesScreen> {
                         conditionBuilder: (BuildContext context) =>
                             cubit != null,
                         widgetBuilder: (BuildContext context) => Expanded(
-                              child: GridView.builder(
-                                gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  crossAxisSpacing: 10,
-                                  mainAxisSpacing: 10,
-                                ),
-                                itemCount: cubit?.length,
-                                itemBuilder: (context, index) {
-                                  return GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              DetailsScreenPlace(
-                                            title: 'Places',
-                                            id: cubit[index].id.toString(),
-                                            idr: cubit[index].idr ?? 0,
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: const Color(0xffD9D9D9),
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    child: GridView.builder(
+                                      gridDelegate:
+                                          const SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisCount: 2,
+                                        crossAxisSpacing: 10,
+                                        mainAxisSpacing: 10,
                                       ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            Expanded(
-                                              child: Container(
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                  image: DecorationImage(
-                                                    image: CachedNetworkImageProvider(
-                                                        cubit![index].image ??
-                                                            'https://static.vecteezy.com/system/resources/previews/004/141/669/original/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg'),
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                  color: Colors.white,
+                                      itemCount: cubit?.length,
+                                      itemBuilder: (context, index) {
+                                        return GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    DetailsScreenPlace(
+                                                  title: 'Places',
+                                                  id: cubit[index]
+                                                      .id
+                                                      .toString(),
+                                                  idr: cubit[index].idr ?? 0,
                                                 ),
                                               ),
+                                            );
+                                          },
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: const Color(0xffD9D9D9),
                                             ),
-                                            Text(
-                                              cubit[index].name!,
-                                              overflow: TextOverflow.ellipsis,
-                                              style: TextStyle(
-                                                color:
-                                                    ColorManager.kColorPrimary,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w700,
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Expanded(
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        image: DecorationImage(
+                                                          image: CachedNetworkImageProvider(
+                                                              cubit![index]
+                                                                      .image ??
+                                                                  'https://static.vecteezy.com/system/resources/previews/004/141/669/original/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg'),
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    cubit[index].name!,
+                                                    maxLines: 1,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                    style: TextStyle(
+                                                      color: ColorManager
+                                                          .kColorPrimary,
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    cubit[index].description!,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                    style: const TextStyle(
+                                                      color: Color(0xff606060),
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ),
+                                                    maxLines: 1,
+                                                  ),
+                                                  /*Text(
+                                                cubit[index].location!,
+                                                overflow: TextOverflow.ellipsis,
+                                                style: const TextStyle(
+                                                  color: Color(0xff003441),
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
+                                                maxLines: 1,
+                                              ),*/
+                                                ],
                                               ),
                                             ),
-                                            /*Expanded(
-                                          child: Text(
-                                            cubit[index].description!,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: const TextStyle(
-                                              color: Color(0xff606060),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w700,
-                                            ),
-                                            maxLines: 2,
                                           ),
-                                        ),*/
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Text(
-                                              cubit[index].location!,
-                                              style: const TextStyle(
-                                                color: Color(0xff003441),
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w700,
-                                              ),
-                                              maxLines: 2,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                        );
+                                      },
                                     ),
-                                  );
-                                },
+                                  ),
+                                  NumberPaginator(
+                                      numberPages: 20,
+                                      onPageChange: (int pageNumber) {
+                                        HomeCubit.get(context)
+                                            .getAllPlaces(page: pageNumber + 1);
+                                        setState(() {
+                                          selectedPageNumber = pageNumber;
+                                        });
+                                      },
+                                      initialPage: selectedPageNumber,
+                                      config: const NumberPaginatorUIConfig(
+                                        buttonUnselectedForegroundColor:
+                                            Colors.white,
+                                        buttonSelectedForegroundColor:
+                                            Colors.white,
+                                        // buttonSelectedBackgroundColor: ColorManager.primary,
+                                      )),
+                                ],
                               ),
                             ),
                         fallbackBuilder: (BuildContext context) => Expanded(
@@ -208,68 +223,6 @@ class _PlacesScreenState extends State<PlacesScreen> {
                   ],
                 ),
               ),
-
-              bottomNavigationBar: NumberPaginator(
-                // by default, the paginator shows numbers as center content
-                numberPages: 24,
-                onPageChange: (int pageNumber) {
-                  HomeCubit.get(context).getAllPlaces(page: pageNumber);
-                  setState(() {
-                    selectedPageNumber = pageNumber;
-                  });
-                },
-                // show/hide the prev/next buttons
-                showPrevButton: true,
-                showNextButton: true, // defaults to true
-
-                config: const NumberPaginatorUIConfig(
-                  buttonSelectedBackgroundColor: Colors.amber,
-                  buttonUnselectedForegroundColor: Colors.white,
-                  buttonSelectedForegroundColor: Colors.white,
-                  // buttonSelectedBackgroundColor: ColorManager.primary,
-                ),
-                // custom content of the prev/next buttons, maintains their behavior
-                // nextButtonContent: Icon(Icons.arrow_right_alt),
-                // custom prev/next buttons using builder (ignored if showPrevButton/showNextButton is false)
-                // prevButtonBuilder: (context) => TextButton(
-                //   onPressed:
-                //       () {}, // _controller must be passed to NumberPaginator
-                //   child: const Row(
-                //     children: [
-                //       Icon(Icons.chevron_left),
-                //       Text("Previous"),
-                //     ],
-                //   ),
-                // ),
-              ),
-
-              //Paginator
-              // bottomNavigationBar: NumberPaginator(
-              //     numberPages: 24,
-              //     onPageChange: (int pageNumber) {
-              //       HomeCubit.get(context).getAllPlaces(page: pageNumber);
-              //       setState(() {
-              //         selectedPageNumber = pageNumber;
-              //       });
-              //     },
-              //     initialPage: selectedPageNumber ,
-              //     config: const NumberPaginatorUIConfig(
-              //       buttonUnselectedForegroundColor: Colors.white,
-              //       buttonSelectedForegroundColor: Colors.white,
-              //       // buttonSelectedBackgroundColor: ColorManager.primary,
-              //     )
-              //     /*  onPageChanged: (int pageNumber) {
-              //     HomeCubit.get(context).getAllPlaces(page: pageNumber);
-              //     setState(() {
-              //       selectedPageNumber = pageNumber;
-              //     });
-              //   },
-              //   threshold: 3,
-              //   pageTotal:  20,
-              //   pageInit: selectedPageNumber, // picked number when init page
-              //   colorPrimary: ColorManager.primary,
-              //   colorSub: Colors.white,*/
-              //     ),
             ),
           );
         },

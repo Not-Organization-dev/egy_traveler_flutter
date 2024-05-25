@@ -13,16 +13,12 @@ import 'package:egytraveler/core/layout/homeLayout/Presentation/Manager/HomeLayo
 
 class NewPassword extends StatelessWidget {
   NewPassword({super.key});
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
   final TextEditingController currentPasswordController =
       TextEditingController();
   final TextEditingController newPasswordController = TextEditingController();
-
   final TextEditingController newPasswordConfirmController =
       TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -37,19 +33,12 @@ class NewPassword extends StatelessWidget {
             Navigator.pop(context);
           } else if (state is UpdatePasswordError) {
             /* CherryToast.error(
-
               title:  const Text("Error"),
-
               displayIcon:  false,
-
               description: Text(state.errorModel),
-
               animationType:  AnimationType.fromTop,
-
               animationDuration:  const Duration(milliseconds:  1000),
-
               autoDismiss:  true
-
           ).show(context);*/
           }
         },
@@ -128,13 +117,13 @@ class NewPassword extends StatelessWidget {
                                 iconData: Icons.lock,
                                 suffixIcon: IconButton(
                                   onPressed: () {
-                                    cubit.changePasswordVisibility();
+                                    cubit.changePasswordVisibility1();
                                   },
                                   icon: Icon(
-                                    HomeCubit.get(context).suffix,
+                                    HomeCubit.get(context).suffix1,
                                   ),
                                 ),
-                                obscureText: cubit.isPasswordShown,
+                                obscureText: cubit.isPasswordShown1,
                                 validator: (value) {
                                   if (value!.isEmpty) {
                                     return 'Password must not be empty'
@@ -156,13 +145,13 @@ class NewPassword extends StatelessWidget {
                                 iconData: Icons.lock,
                                 suffixIcon: IconButton(
                                   onPressed: () {
-                                    cubit.changePasswordVisibility();
+                                    cubit.changePasswordVisibility2();
                                   },
                                   icon: Icon(
-                                    HomeCubit.get(context).suffix,
+                                    HomeCubit.get(context).suffix2,
                                   ),
                                 ),
-                                obscureText: cubit.isPasswordShown,
+                                obscureText: cubit.isPasswordShown2,
                                 validator: (value) {
                                   if (value!.isEmpty) {
                                     return 'Password must not be empty'

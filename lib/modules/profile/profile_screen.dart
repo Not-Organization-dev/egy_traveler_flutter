@@ -218,14 +218,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           const SizedBox(
                             height: 10,
                           ),
-                          Text(
-                            'Phone Number'.tr(context),
-                            style: const TextStyle(
-                              color: Color(0xFFBF8148),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
+                          // Text(
+                          //   'Phone Number'.tr(context),
+                          //   style: const TextStyle(
+                          //     color: Color(0xFFBF8148),
+                          //     fontSize: 18,
+                          //     fontWeight: FontWeight.w400,
+                          //   ),
+                          // ),
                           Text(
                             cubit.userData?.data?.user?.phone ?? '',
                             style: const TextStyle(

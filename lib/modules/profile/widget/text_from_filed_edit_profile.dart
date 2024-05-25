@@ -9,11 +9,13 @@ class TextFromFiledEditProfile extends StatelessWidget {
     required this.controller,
     required this.keyboardType,
     required this.hintText,
+    this.onChanged,
   });
   final String title;
   final TextEditingController controller;
   final TextInputType keyboardType;
   final String hintText;
+  final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,6 +36,7 @@ class TextFromFiledEditProfile extends StatelessWidget {
         TextFormField(
           controller: controller,
           keyboardType: keyboardType,
+          onChanged: onChanged,
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.symmetric(horizontal: 10),
             hintText: hintText,

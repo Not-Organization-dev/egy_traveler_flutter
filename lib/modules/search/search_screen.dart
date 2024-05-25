@@ -11,7 +11,6 @@ import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_scr
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
-
   @override
   State<SearchScreen> createState() => _SearchScreenState();
 }
@@ -25,6 +24,7 @@ class _SearchScreenState extends State<SearchScreen> {
     return BlocConsumer<HomeCubit, HomeStates>(
       listener: (context, state) {},
       builder: (context, state) {
+        var cubit = HomeCubit.get(context);
         return WillPopScope(
           onWillPop: () async {
             HomeCubit.get(context).searchPlacesModel?.data?.places?.clear();
@@ -131,12 +131,15 @@ class _SearchScreenState extends State<SearchScreen> {
                                       search: searchController.text,
                                       category: valueId);
                                 } else if (searchController.text.isEmpty) {
-                                  print('sadsad');
-                                  HomeCubit.get(context)
-                                      .searchPlacesModel
-                                      ?.data
-                                      ?.places
-                                      ?.clear();
+                                  setState(() {
+                                    HomeCubit.get(context)
+                                        .searchPlacesModel
+                                        ?.data
+                                        ?.places
+                                        ?.clear();
+                                    HomeCubit.get(context).searchPlacesModel =
+                                        null;
+                                  });
                                 }
                               },
                               child: Container(
@@ -150,12 +153,12 @@ class _SearchScreenState extends State<SearchScreen> {
                                                 .toString() ==
                                             'ar'
                                         ? Radius.zero
-                                        : Radius.circular(10),
+                                        : const Radius.circular(10),
                                     left: HomeCubit.get(context)
                                                 .locale
                                                 .toString() ==
                                             'ar'
-                                        ? Radius.circular(10)
+                                        ? const Radius.circular(10)
                                         : Radius.zero,
                                   ),
                                 ),

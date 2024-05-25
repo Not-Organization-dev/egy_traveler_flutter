@@ -14,7 +14,6 @@ import 'package:egytraveler/modules/profile/widget/text_from_filed_edit_profile.
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
-
   @override
   State<EditProfileScreen> createState() => _EditProfileScreenState();
 }
@@ -30,6 +29,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
+  bool isEdit = false;
   @override
   void initState() {
     var userData = HomeCubit.get(context).userData!.data!.user;
@@ -74,6 +74,22 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         title: 'Full Name'.tr(context),
                         controller: fullNameController,
                         keyboardType: TextInputType.name,
+                        onChanged: (v) {
+                          if (fullNameController.text ==
+                              HomeCubit.get(context)
+                                  .userData!
+                                  .data!
+                                  .user!
+                                  .name) {
+                            setState(() {
+                              isEdit = false;
+                            });
+                          } else {
+                            setState(() {
+                              isEdit = true;
+                            });
+                          }
+                        },
                         hintText: ''),
                     const SizedBox(
                       height: 21,
@@ -82,21 +98,64 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         title: 'E-mail'.tr(context),
                         controller: emailController,
                         keyboardType: TextInputType.emailAddress,
+                        onChanged: (v) {
+                          if (emailController.text ==
+                              HomeCubit.get(context)
+                                  .userData!
+                                  .data!
+                                  .user!
+                                  .email) {
+                            setState(() {
+                              isEdit = false;
+                            });
+                          } else {
+                            setState(() {
+                              isEdit = true;
+                            });
+                          }
+                        },
                         hintText: ''),
                     const SizedBox(
                       height: 21,
                     ),
-                    TextFromFiledEditProfile(
+                    /*      TextFromFiledEditProfile(
                         title: 'Phone Number',
                         controller: phoneController,
+                        onChanged: (v) {
+                          if(phoneController.text == HomeCubit.get(context).userData!.data!.user!.phone) {
+                            setState(() {
+                              isEdit = false;
+                            });
+                          } else {
+                            setState(() {
+                              isEdit = true;
+                            });
+                          }
+                        },
                         keyboardType: TextInputType.phone,
                         hintText: ''),
                     const SizedBox(
                       height: 21,
-                    ),
+                    ),*/
                     TextFromFiledEditProfile(
                         title: 'Address'.tr(context),
                         controller: addressController,
+                        onChanged: (v) {
+                          if (addressController.text ==
+                              HomeCubit.get(context)
+                                  .userData!
+                                  .data!
+                                  .user!
+                                  .address) {
+                            setState(() {
+                              isEdit = false;
+                            });
+                          } else {
+                            setState(() {
+                              isEdit = true;
+                            });
+                          }
+                        },
                         keyboardType: TextInputType.streetAddress,
                         hintText: ''),
                     const SizedBox(
@@ -136,32 +195,43 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                             horizontal: 24,
                           ),
                           child: TextButton(
-                            onPressed: () {
-                              var userData =
-                                  HomeCubit.get(context).userData!.data!.user;
-                              if (fullNameController.text == userData!.name &&
-                                  emailController.text == userData.email &&
-                                  phoneController.text == userData.phone &&
-                                  addressController.text == userData.address) {
-                                CherryToast.info(
-                                  title: const Text('No Changes'),
-                                  animationType: AnimationType.fromTop,
-                                ).show(context);
-                              } else {
-                                cubit.updateProfile(
-                                  username: fullNameController.text,
-                                  address: addressController.text,
-                                  phone: phoneController.text,
-                                  avatar: HomeCubit.get(context).postImage,
-                                );
-                              }
-                            },
+                            onPressed: isEdit == false
+                                ? null
+                                : () {
+                                    var userData = HomeCubit.get(context)
+                                        .userData!
+                                        .data!
+                                        .user;
+                                    if (fullNameController.text ==
+                                            userData!.name &&
+                                        emailController.text ==
+                                            userData.email &&
+                                        phoneController.text ==
+                                            userData.phone &&
+                                        addressController.text ==
+                                            userData.address) {
+                                      CherryToast.info(
+                                        title: const Text('No Changes'),
+                                        animationType: AnimationType.fromTop,
+                                      ).show(context);
+                                    } else {
+                                      cubit.updateProfile(
+                                        username: fullNameController.text,
+                                        address: addressController.text,
+                                        phone: phoneController.text,
+                                        avatar:
+                                            HomeCubit.get(context).postImage,
+                                      );
+                                    }
+                                  },
                             style: TextButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 // backgroundColor: ColorManager.primary,
-                                backgroundColor: const Color(0xff003441)),
+                                backgroundColor: isEdit == false
+                                    ? Colors.grey
+                                    : const Color(0xff003441)),
                             child: Text(
                               "Save".tr(context),
                               style: const TextStyle(
