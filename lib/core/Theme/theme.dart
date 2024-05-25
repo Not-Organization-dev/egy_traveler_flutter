@@ -26,7 +26,7 @@ final kLightThemeData = ThemeData.light().copyWith(
   scaffoldBackgroundColor: Colors.white,
   primaryColor: ColorManager.kColorPrimary,
   drawerTheme: const DrawerThemeData().copyWith(
-    backgroundColor: ColorManager.kDarkColorBackgroundLight,
+    backgroundColor: ColorManager.kColorSubTitle,
   ),
   iconTheme: const IconThemeData().copyWith(
     color: ColorManager.kDarkColorBackground,
