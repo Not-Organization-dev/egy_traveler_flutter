@@ -7,7 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:location/location.dart';
 
 import 'package:egytraveler/core/resources/string_manager.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/model/AtriclesModelById/AtriclesModelById.dart';
 import 'package:egytraveler/model/articlesModel/articles_model.dart';
 import 'package:egytraveler/model/eventByIdModel/EventByIdModel.dart';

@@ -9,8 +9,8 @@ import 'package:egytraveler/Features/onBoarding/Presentation/view/onboarding_vie
 import 'package:egytraveler/Features/splash/Presentation/View/splash_view.dart';
 import 'package:egytraveler/core/Theme/theme.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/layout/homeLayout/Presentation/View/homelayout.dart';
 import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
 import 'package:egytraveler/Features/Auth/Presentation/view/sign_in_and_up_view.dart';

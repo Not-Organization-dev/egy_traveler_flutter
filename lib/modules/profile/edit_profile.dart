@@ -7,8 +7,8 @@ import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/resources/font_manager.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/modules/newPassword/new_password.dart';
 import 'package:egytraveler/modules/profile/widget/text_from_filed_edit_profile.dart';
 

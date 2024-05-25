@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
 import 'package:egytraveler/Features/Auth/Presentation/view/sign_in_and_up_view.dart';
 import 'package:egytraveler/shared/components/size_config.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';

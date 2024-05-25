@@ -8,8 +8,8 @@ import 'package:flutter_conditional_rendering/conditional.dart';
 import 'package:egytraveler/core/Widgets/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 
 class NewPassword extends StatelessWidget {
   NewPassword({super.key});

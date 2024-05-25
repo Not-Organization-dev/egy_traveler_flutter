@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/modules/detailsScreen/DetailsScreenPlace/details_screen_place.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -25,7 +25,6 @@ class _SearchScreenState extends State<SearchScreen> {
     return BlocConsumer<HomeCubit, HomeStates>(
       listener: (context, state) {},
       builder: (context, state) {
-        var cubit = HomeCubit.get(context);
         return WillPopScope(
           onWillPop: () async {
             HomeCubit.get(context).searchPlacesModel?.data?.places?.clear();

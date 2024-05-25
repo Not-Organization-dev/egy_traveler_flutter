@@ -6,8 +6,8 @@ import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart
 
 import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/generated/assets.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 
 class DetailsScreenArticles extends StatefulWidget {
   const DetailsScreenArticles(

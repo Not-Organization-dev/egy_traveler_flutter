@@ -6,8 +6,8 @@ import 'package:skeletonizer/skeletonizer.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/core/utils/color_manager.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/cubit.dart';
-import 'package:egytraveler/layout/homeLayout/cubit/state.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/cubit.dart';
+import 'package:egytraveler/layout/homeLayout/Presentation/Manager/HomeLayoutCubit/state.dart';
 import 'package:egytraveler/modules/detailsScreen/DetailsScreenArticles/details_screen_articles.dart';
 
 class ArticlesScreen extends StatelessWidget {
