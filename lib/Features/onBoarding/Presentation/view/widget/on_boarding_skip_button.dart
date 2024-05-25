@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/modules/Auth/view/sign_in_and_up.dart';
+import 'package:egytraveler/Features/Auth/Presentation/view/sign_in_and_up_view.dart';
 import 'package:egytraveler/shared/components/constants.dart';
 import 'package:egytraveler/shared/network/local/cache_helper.dart';
 
@@ -20,7 +20,7 @@ class OnBoardingSkipButton extends StatelessWidget {
         CacheHelper.saveData(key: 'onBoarding', value: true).then((value) {
           // Navigating to the sign in/up screen after onboarding
           if (value == true) {
-            navigateFish(context, const SignInAndUp());
+            navigateFish(context, const SignInAndUpView());
           }
         });
       },

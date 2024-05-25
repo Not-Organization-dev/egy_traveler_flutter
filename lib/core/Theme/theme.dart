@@ -9,6 +9,13 @@ final kDarkThemeData = ThemeData.dark().copyWith(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: ColorManager.kDarkColorBackground,
   primaryColor: ColorManager.kColorPrimary,
+  textTheme: const TextTheme().copyWith(),
+  drawerTheme: const DrawerThemeData().copyWith(
+    backgroundColor: ColorManager.kDarkColorBackground,
+  ),
+  iconTheme: const IconThemeData().copyWith(
+    color: Colors.white,
+  ),
 );
 
 //TODO: Change colors for light theme
@@ -18,4 +25,10 @@ final kLightThemeData = ThemeData.light().copyWith(
   brightness: Brightness.light,
   scaffoldBackgroundColor: Colors.white,
   primaryColor: ColorManager.kColorPrimary,
+  drawerTheme: const DrawerThemeData().copyWith(
+    backgroundColor: ColorManager.kDarkColorBackgroundLight,
+  ),
+  iconTheme: const IconThemeData().copyWith(
+    color: ColorManager.kDarkColorBackground,
+  ),
 );

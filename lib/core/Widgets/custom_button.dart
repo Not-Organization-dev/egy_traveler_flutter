@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
-
-import 'package:egytraveler/shared/components/constants.dart';
+import 'package:egytraveler/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -12,11 +11,10 @@ class CustomButton extends StatelessWidget {
     required this.colorTitle,
     required this.onTap,
   });
+
   final Color colorButton;
   final String title;
-
   final Color colorTitle;
-
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -39,10 +37,8 @@ class CustomButton extends StatelessWidget {
           children: [
             Text(
               title.tr(context),
-              style: TextStyle(
+              style: Styles.textBold20.copyWith(
                 color: colorTitle,
-                fontSize: getResponsiveFontSize(context, fontSize: 50),
-                fontWeight: FontWeight.w700,
               ),
             ),
           ],
