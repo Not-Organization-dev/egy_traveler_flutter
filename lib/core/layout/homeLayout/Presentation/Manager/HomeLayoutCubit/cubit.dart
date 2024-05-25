@@ -20,7 +20,7 @@ import 'package:egytraveler/model/tripsByIdModel/TripsByIdModel.dart';
 import 'package:egytraveler/model/tripsModel/TripsModel.dart';
 import 'package:egytraveler/model/usermodel/UserModel.dart';
 import 'package:egytraveler/modules/Event/event_screen.dart';
-import 'package:egytraveler/Features/Home/Home_page.dart';
+import 'package:egytraveler/Features/Home/Presentation/View/home_view.dart';
 import 'package:egytraveler/modules/Trips/trips_screen.dart';
 import 'package:egytraveler/modules/profile/profile_screen.dart';
 import 'package:egytraveler/shared/components/constants.dart';
@@ -74,7 +74,7 @@ class HomeCubit extends Cubit<HomeStates> {
   int currentIndex = 0;
 
   List<Widget> screens = [
-    const HomePage(),
+    const HomeView(),
     const TripsScreen(),
     const EventScreen(),
     const ProfileScreen(),
