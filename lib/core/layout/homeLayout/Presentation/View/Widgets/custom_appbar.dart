@@ -1,3 +1,4 @@
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:egytraveler/generated/assets.dart';
 
@@ -13,7 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         height: 100,
       ),
       centerTitle: true,
-      backgroundColor: const Color(0x66D9D9D9),
+      backgroundColor: ColorManager.kCustomAppBarColor,
       elevation: 0,
     );
   }

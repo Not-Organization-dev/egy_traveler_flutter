@@ -75,6 +75,12 @@ abstract class Styles {
     color: Colors.white,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle textPrimaryBold16 = TextStyle(
+    fontFamily: kPrimaryFontStyle,
+    fontSize: 16,
+    color: ColorManager.kColorPrimary,
+    fontWeight: FontWeight.w700,
+  );
 
   static TextStyle textBold18 = TextStyle(
     fontFamily: kPrimaryFontStyle,
