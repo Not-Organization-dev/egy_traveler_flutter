@@ -22,18 +22,27 @@ class ResetPasswordView extends StatelessWidget {
       listener: (context, state) {
         if (state is ResetPasswordSuccess) {
           CherryToast.success(
-            title: Text(state.successModel['message']),
+            title: Text(
+              'Success, Please wait for OTP code.',
+              style: Styles.textBold14.copyWith(
+                color: Theme.of(context).iconTheme.color,
+              ),
+            ),
             animationType: AnimationType.fromTop,
           ).show(context);
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) =>
-                    VerificationView(email: emailController.value.text)),
+              builder: (context) =>
+                  VerificationView(email: emailController.value.text),
+            ),
           );
         } else if (state is ResetPasswordError) {
           CherryToast.error(
-                  title: const Text("Error"),
+                  title: Text(
+                    "Something went wrong! Please try again later.",
+                    style: Styles.textBold14,
+                  ),
                   displayIcon: false,
                   description: Text(state.errorModel!),
                   animationType: AnimationType.fromTop,

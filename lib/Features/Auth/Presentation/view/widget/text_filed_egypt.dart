@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:egytraveler/core/resources/app_localizations.dart';
-import 'package:egytraveler/shared/components/constants.dart';
 
 class TextFiledEgypt extends StatelessWidget {
   TextFiledEgypt(
@@ -34,12 +33,6 @@ class TextFiledEgypt extends StatelessWidget {
         labelText: title.tr(context),
         prefixIcon: Icon(iconData),
         suffixIcon: suffixIcon,
-        hintText: title.tr(context),
-        hintStyle: TextStyle(
-          color: Colors.black,
-          fontSize: getResponsiveFontSize(context, fontSize: 16),
-          fontWeight: FontWeight.w400,
-        ),
         border: const UnderlineInputBorder(
           borderSide: BorderSide(
             color: Colors.grey,
