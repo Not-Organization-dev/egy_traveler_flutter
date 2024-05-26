@@ -1,5 +1,6 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
+import 'package:egytraveler/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
@@ -8,8 +9,6 @@ import 'package:egytraveler/core/Widgets/custom_button.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
 import 'package:egytraveler/Features/Auth/Presentation/Manager/AuthCubit/auth_cubit.dart';
 import 'package:egytraveler/Features/Auth/Presentation/view/verification_view.dart';
-
-import 'package:egytraveler/shared/components/constants.dart';
 
 class ResetPasswordView extends StatelessWidget {
   ResetPasswordView({super.key});
@@ -45,37 +44,26 @@ class ResetPasswordView extends StatelessWidget {
       },
       builder: (context, state) {
         return Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-            elevation: 0,
-          ),
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 22),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 80,
                   ),
                   Text(
                     'Forgot your password?'.tr(context),
-                    style: TextStyle(
-                      color: const Color(0xFF12121D),
-                      fontSize: getResponsiveFontSize(context, fontSize: 26),
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: Styles.textBold20,
                   ),
                   const SizedBox(
                     height: 8,
                   ),
                   Text(
                     'forgotPassword'.tr(context),
-                    style: TextStyle(
-                      color: const Color(0x9912121D),
-                      fontSize: getResponsiveFontSize(context, fontSize: 12),
-                      fontWeight: FontWeight.w400,
-                    ),
+                    style: Styles.textThin10,
                   ),
                   Form(
                     key: formKey,
@@ -88,19 +76,13 @@ class ResetPasswordView extends StatelessWidget {
                           controller: emailController,
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
-                            labelText: 'Your Phone Number'.tr(context),
+                            labelText:
+                                'Enter your Email to continue'.tr(context),
                             prefixIcon: const Icon(Icons.email),
-                            labelStyle: TextStyle(
-                              color: const Color(0xFF12121D),
-                              fontSize:
-                                  getResponsiveFontSize(context, fontSize: 16),
-                              fontWeight: FontWeight.w400,
-                            ),
+                            labelStyle: Styles.textRegular12,
                             border: UnderlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: const BorderSide(
-                                color: Colors.grey,
-                              ),
+                              borderSide: const BorderSide(),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
