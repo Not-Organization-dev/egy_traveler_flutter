@@ -59,7 +59,7 @@ class HomeViewBody extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: HomeYouMayLikeListView(cubit: cubit),
+          child: HomeYouMayLikeCarousel(cubit: cubit),
         ),
         SliverToBoxAdapter(
           child: HomeGridInfoAndButton(
