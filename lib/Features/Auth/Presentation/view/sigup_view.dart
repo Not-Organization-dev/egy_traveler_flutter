@@ -1,5 +1,6 @@
 import 'package:egytraveler/Features/Auth/Presentation/view/widget/sign_up_widgets/sign_up_view_body.dart';
 import 'package:egytraveler/core/resources/app_localizations.dart';
+import 'package:egytraveler/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cherry_toast/cherry_toast.dart';
@@ -40,7 +41,12 @@ class SignUpView extends StatelessWidget {
   Future<void> _handleRegisterSuccess(
       BuildContext context, RegisterSuccessState state) async {
     CherryToast.success(
-      title: Text('Welcome back!'.tr(context)),
+      title: Text(
+        'Welcome back!'.tr(context),
+        style: Styles.textBold12.copyWith(
+          color: Theme.of(context).iconTheme.color,
+        ),
+      ),
       animationType: AnimationType.fromTop,
     ).show(context);
 
@@ -59,7 +65,12 @@ class SignUpView extends StatelessWidget {
 
   void _handleRegisterError(BuildContext context, RegisterErrorState state) {
     CherryToast.error(
-      title: const Text("Error"),
+      title: Text(
+        "Error",
+        style: Styles.textBold12.copyWith(
+          color: Theme.of(context).iconTheme.color,
+        ),
+      ),
       displayIcon: false,
       description: Text(state.errorModel!),
       animationType: AnimationType.fromTop,

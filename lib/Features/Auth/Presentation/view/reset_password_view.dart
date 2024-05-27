@@ -1,5 +1,6 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:egytraveler/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,9 +24,9 @@ class ResetPasswordView extends StatelessWidget {
         if (state is ResetPasswordSuccess) {
           CherryToast.success(
             title: Text(
-              'Success, Please wait for OTP code.',
-              style: Styles.textBold14.copyWith(
-                color: Theme.of(context).iconTheme.color,
+              'Please wait for OTP code.',
+              style: Styles.textBold12.copyWith(
+                color: ColorManager.kDarkColorBackground,
               ),
             ),
             animationType: AnimationType.fromTop,
@@ -41,7 +42,9 @@ class ResetPasswordView extends StatelessWidget {
           CherryToast.error(
                   title: Text(
                     "Something went wrong! Please try again later.",
-                    style: Styles.textBold14,
+                    style: Styles.textBold12.copyWith(
+                      color: ColorManager.kDarkColorBackground,
+                    ),
                   ),
                   displayIcon: false,
                   description: Text(state.errorModel!),
@@ -88,7 +91,8 @@ class ResetPasswordView extends StatelessWidget {
                             labelText:
                                 'Enter your Email to continue'.tr(context),
                             prefixIcon: const Icon(Icons.email),
-                            labelStyle: Styles.textRegular12,
+                            labelStyle: Styles.textRegular12
+                                .copyWith(color: Theme.of(context).hintColor),
                             border: UnderlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: const BorderSide(),

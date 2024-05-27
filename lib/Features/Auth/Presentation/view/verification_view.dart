@@ -1,5 +1,6 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
+import 'package:egytraveler/core/utils/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
@@ -16,17 +17,8 @@ import 'widget/validation_form.dart';
 class VerificationView extends StatelessWidget {
   VerificationView({super.key, required this.email});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
   final TextEditingController otpController = TextEditingController();
-
-  // final TextEditingController _controller2 = TextEditingController();
-
-  // final TextEditingController _controller3 = TextEditingController();
-
-  // final TextEditingController _controller4 = TextEditingController();
-
   final TextEditingController passwordController = TextEditingController();
-
   final TextEditingController passwordConfirmController =
       TextEditingController();
   final String email;
@@ -36,13 +28,23 @@ class VerificationView extends StatelessWidget {
       listener: (context, state) {
         if (state is OtpSuccess) {
           CherryToast.success(
-            title: Text(state.successModel['message']),
+            title: Text(
+              state.successModel['message'],
+              style: Styles.textBold12.copyWith(
+                color: ColorManager.kDarkColorBackground,
+              ),
+            ),
             animationType: AnimationType.fromTop,
           ).show(context);
           navigateFish(context, const SignInAndUpView());
         } else if (state is OtpError) {
           CherryToast.error(
-                  title: const Text("Error"),
+                  title: Text(
+                    "Something went Wrong, Please try again later",
+                    style: Styles.textBold12.copyWith(
+                      color: ColorManager.kDarkColorBackground,
+                    ),
+                  ),
                   displayIcon: false,
                   description: Text(state.errorModel),
                   animationType: AnimationType.fromTop,
@@ -82,10 +84,7 @@ class VerificationView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
-                ),
-                const SizedBox(
-                  height: 35,
+                  height: 60,
                 ),
                 Form(
                   key: formKey,

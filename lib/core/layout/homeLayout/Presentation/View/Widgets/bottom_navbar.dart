@@ -18,7 +18,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             cubit.changeBottomNavIndex(value);
           },
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-          height: 60,
+          height: 55,
           buttonBackgroundColor: Theme.of(context).highlightColor,
           color: const Color.fromRGBO(224, 153, 85, 1),
           animationCurve: Curves.easeInOutSine,

@@ -38,7 +38,12 @@ class _SigInViewState extends State<SigInView> {
       listener: (context, state) async {
         if (state is SingInSuccessState) {
           CherryToast.success(
-            title: Text('Welcome back!'.tr(context)),
+            title: Text(
+              'Welcome back!'.tr(context),
+              style: Styles.textBold12.copyWith(
+                color: Theme.of(context).iconTheme.color,
+              ),
+            ),
             animationType: AnimationType.fromTop,
           ).show(context);
           await CacheHelper.saveData(
@@ -60,7 +65,12 @@ class _SigInViewState extends State<SigInView> {
           navigateFish(context, const HomeLayout());
         } else if (state is SingInErrorState) {
           CherryToast.error(
-                  title: const Text("Error"),
+                  title: Text(
+                    "Error",
+                    style: Styles.textBold12.copyWith(
+                      color: Theme.of(context).iconTheme.color,
+                    ),
+                  ),
                   displayIcon: false,
                   description: Text(state.errorModel!),
                   animationType: AnimationType.fromTop,

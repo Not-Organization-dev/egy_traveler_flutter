@@ -24,6 +24,11 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 22,
+          ),
+        ),
         SliverToBoxAdapter(
           child: Text(
             '${'Welcome'.tr(context)}, ${HomeCubit.get(context).userData?.data?.user?.name}',

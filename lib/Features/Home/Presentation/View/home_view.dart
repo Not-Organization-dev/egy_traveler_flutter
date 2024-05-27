@@ -18,7 +18,9 @@ class HomeView extends StatelessWidget {
         var cubit = HomeCubit.get(context);
         return Scaffold(
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 22),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 24.0,
+            ),
             child: HomeViewBody(cubit: cubit),
           ),
         );
